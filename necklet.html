@@ -1,0 +1,2880 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Necklet — Handcrafted & Trendy Jewelry Made Just for You</title>
+  <meta name="description" content="Vibrant, handcrafted jewelry by Necklet. Explore unique girls bracelets, boys bracelets, girls necklaces, boys necklaces, earrings, and special designs made just for you." />
+  
+  <!-- Google Fonts: Poppins & Playfair Display for headings, Inter & Plus Jakarta Sans for body -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Poppins:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       CSS RESET & CUSTOM VARIABLES
+       Theme: Warm Pastel Gradients, Crisp White Cards, Bold Charcoal Text
+       ========================================================================== */
+    :root {
+      /* Warm Pastel Gradients */
+      --sunset-peach: #FF7E5F;
+      --peach-light: #FEB47B;
+      --sunset-gradient: linear-gradient(135deg, #FF7E5F 0%, #FEB47B 100%);
+      --sunset-glow: rgba(255, 126, 95, 0.35);
+
+      --soft-lavender: #A18CD1;
+      --lavender-light: #FBC2EB;
+      --lavender-gradient: linear-gradient(135deg, #A18CD1 0%, #FBC2EB 100%);
+      --lavender-glow: rgba(161, 140, 209, 0.35);
+
+      --mint-green: #38B2AC;
+      --mint-light: #84FAB0;
+      --mint-gradient: linear-gradient(135deg, #38B2AC 0%, #84FAB0 100%);
+      --mint-glow: rgba(56, 178, 172, 0.35);
+
+      --golden-yellow: #F6B93B;
+      --golden-light: #FFEAA7;
+      --golden-gradient: linear-gradient(135deg, #F6B93B 0%, #FEE140 100%);
+      --golden-glow: rgba(246, 185, 59, 0.35);
+
+      /* Multi-Pastel Magic Gradient */
+      --magic-gradient: linear-gradient(135deg, #FF7E5F 0%, #FEB47B 25%, #FBC2EB 50%, #A18CD1 75%, #84FAB0 100%);
+      --brand-gradient: linear-gradient(135deg, #FF6B6B 0%, #FFA07A 35%, #C3B1E1 70%, #72E1D1 100%);
+
+      /* Neutrals & Typography */
+      --bg-page: #FAF8F5;
+      --card-white: #FFFFFF;
+      --card-white-translucent: rgba(255, 255, 255, 0.88);
+      --text-dark: #1E202B;
+      --text-secondary: #5C6274;
+      --text-muted: #8E95A5;
+      --border-subtle: rgba(226, 232, 240, 0.8);
+      --border-accent: rgba(255, 126, 95, 0.25);
+
+      /* Shadows */
+      --shadow-sm: 0 4px 12px rgba(30, 32, 43, 0.04);
+      --shadow-md: 0 10px 25px -5px rgba(30, 32, 43, 0.08), 0 4px 10px rgba(0, 0, 0, 0.03);
+      --shadow-lg: 0 20px 40px -10px rgba(255, 126, 95, 0.15), 0 10px 20px -5px rgba(161, 140, 209, 0.12);
+      --shadow-hover: 0 24px 48px -12px rgba(255, 110, 150, 0.22), 0 12px 24px rgba(0, 0, 0, 0.06);
+
+      /* Radius */
+      --radius-sm: 12px;
+      --radius-md: 18px;
+      --radius-lg: 24px;
+      --radius-full: 9999px;
+
+      /* Transitions */
+      --ease-smooth: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      --ease-bounce: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      background-color: var(--bg-page);
+      background-image: 
+        radial-gradient(at 5% 5%, rgba(255, 126, 95, 0.12) 0px, transparent 45%),
+        radial-gradient(at 95% 10%, rgba(161, 140, 209, 0.14) 0px, transparent 50%),
+        radial-gradient(at 15% 55%, rgba(132, 250, 176, 0.12) 0px, transparent 45%),
+        radial-gradient(at 85% 65%, rgba(254, 225, 64, 0.13) 0px, transparent 50%),
+        radial-gradient(at 50% 95%, rgba(251, 194, 235, 0.15) 0px, transparent 50%);
+      background-attachment: fixed;
+      color: var(--text-dark);
+      font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      color: var(--text-dark);
+      font-family: 'Poppins', 'Playfair Display', sans-serif;
+      font-weight: 700;
+      line-height: 1.25;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: var(--ease-smooth);
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    button {
+      font-family: inherit;
+      border: none;
+      background: none;
+      cursor: pointer;
+      outline: none;
+    }
+
+    /* Container Utility */
+    .container {
+      width: 100%;
+      max-width: 1240px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+
+    /* Vibrant Gradient Text Utility */
+    .gradient-text {
+      background: var(--magic-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+    }
+
+    .gradient-sunset-text {
+      background: var(--sunset-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+    }
+
+    /* Section Header Block */
+    .section-header {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 48px auto;
+    }
+
+    .section-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      border-radius: var(--radius-full);
+      background: #FFFFFF;
+      box-shadow: 0 4px 15px rgba(255, 126, 95, 0.15);
+      border: 1px solid rgba(255, 126, 95, 0.2);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: var(--sunset-peach);
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 3.8vw, 3rem);
+      margin-bottom: 16px;
+      letter-spacing: -0.5px;
+    }
+
+    .section-desc {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    /* ==========================================================================
+       NAVIGATION BAR
+       ========================================================================== */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(230, 230, 245, 0.7);
+      transition: var(--ease-smooth);
+    }
+
+    .navbar.scrolled {
+      background: rgba(255, 255, 255, 0.96);
+      box-shadow: 0 10px 30px rgba(30, 32, 43, 0.06);
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 80px;
+    }
+
+    /* Brand Logo */
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .brand-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      background: var(--magic-gradient);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 18px var(--sunset-glow);
+      color: #FFFFFF;
+      font-size: 22px;
+      transition: var(--ease-bounce);
+    }
+
+    .brand-logo:hover .brand-icon {
+      transform: rotate(10deg) scale(1.08);
+    }
+
+    .brand-text {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 800;
+      font-size: 1.85rem;
+      letter-spacing: -0.5px;
+      background: linear-gradient(135deg, #FF6B6B 0%, #FEB47B 40%, #A18CD1 80%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .brand-dot {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--mint-green);
+      margin-left: 2px;
+    }
+
+    /* Desktop Navigation Links */
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 36px;
+      list-style: none;
+    }
+
+    .nav-link {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--text-dark);
+      position: relative;
+      padding: 6px 0;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 3px;
+      border-radius: var(--radius-full);
+      background: var(--sunset-gradient);
+      transition: var(--ease-smooth);
+    }
+
+    .nav-link:hover {
+      color: var(--sunset-peach);
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 100%;
+    }
+
+    /* Nav Actions */
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .btn-nav-order {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 22px;
+      border-radius: var(--radius-full);
+      background: var(--sunset-gradient);
+      color: #FFFFFF;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 0.95rem;
+      box-shadow: 0 6px 18px var(--sunset-glow);
+      transition: var(--ease-bounce);
+    }
+
+    .btn-nav-order:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px var(--sunset-glow);
+    }
+
+    /* Mobile Hamburger Menu Toggle */
+    .mobile-menu-btn {
+      display: none;
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: #FFFFFF;
+      border: 1px solid var(--border-subtle);
+      align-items: center;
+      justify-content: center;
+      color: var(--text-dark);
+      font-size: 20px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* Mobile Navigation Drawer */
+    .mobile-nav-drawer {
+      display: none;
+      position: fixed;
+      top: 80px;
+      left: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 24px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+      z-index: 999;
+      transform: translateY(-120%);
+      transition: transform 0.35s ease;
+    }
+
+    .mobile-nav-drawer.open {
+      transform: translateY(0%);
+    }
+
+    .mobile-nav-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      text-align: center;
+    }
+
+    .mobile-nav-links .nav-link {
+      font-size: 1.25rem;
+      padding: 8px 0;
+      display: block;
+    }
+
+    /* ==========================================================================
+       HERO SECTION
+       ========================================================================== */
+    .hero-section {
+      position: relative;
+      padding: 70px 0 90px 0;
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      align-items: center;
+      gap: 60px;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 20px;
+      border-radius: var(--radius-full);
+      background: #FFFFFF;
+      box-shadow: 0 6px 20px rgba(255, 126, 95, 0.16);
+      border: 1px solid rgba(255, 126, 95, 0.25);
+      margin-bottom: 24px;
+      animation: floatBadge 3.5s ease-in-out infinite alternate;
+    }
+
+    @keyframes floatBadge {
+      0% { transform: translateY(0px); }
+      100% { transform: translateY(-5px); }
+    }
+
+    .hero-pill-sparkle {
+      font-size: 18px;
+    }
+
+    .hero-pill-text {
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      background: var(--magic-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-headline {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      line-height: 1.15;
+      margin-bottom: 22px;
+      letter-spacing: -1px;
+    }
+
+    .hero-subheadline {
+      font-size: clamp(1.1rem, 1.8vw, 1.25rem);
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 36px;
+      max-width: 580px;
+    }
+
+    .hero-cta-group {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 40px;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 16px 36px;
+      border-radius: var(--radius-full);
+      background: var(--sunset-gradient);
+      color: #FFFFFF;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 1.08rem;
+      box-shadow: 0 12px 28px var(--sunset-glow);
+      transition: var(--ease-bounce);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-primary::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+      transition: 0.6s;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 16px 34px rgba(255, 126, 95, 0.45);
+    }
+
+    .btn-primary:hover::before {
+      left: 100%;
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 16px 32px;
+      border-radius: var(--radius-full);
+      background: #FFFFFF;
+      color: var(--text-dark);
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 1.05rem;
+      border: 2px solid rgba(226, 232, 240, 0.9);
+      box-shadow: var(--shadow-sm);
+      transition: var(--ease-smooth);
+    }
+
+    .btn-secondary:hover {
+      background: #FAF8F5;
+      border-color: var(--lavender-light);
+      color: var(--soft-lavender);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+
+    /* Trust Highlights Strip */
+    .hero-features {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 24px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(226, 232, 240, 0.8);
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+    }
+
+    .feature-icon-bubble {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 15px;
+    }
+
+    .bg-peach-light { background: #FFE8E1; color: var(--sunset-peach); }
+    .bg-lavender-light { background: #EFE6FA; color: var(--soft-lavender); }
+    .bg-mint-light { background: #E1F9F5; color: var(--mint-green); }
+    .bg-gold-light { background: #FFF7DF; color: var(--golden-yellow); }
+
+    /* Hero Visual Graphic Collage */
+    .hero-visual {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-card-stack {
+      position: relative;
+      width: 100%;
+      max-width: 450px;
+      aspect-ratio: 1/1.08;
+    }
+
+    .hero-main-card {
+      position: absolute;
+      inset: 12px;
+      background: #FFFFFF;
+      border-radius: var(--radius-lg);
+      padding: 16px;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid rgba(255, 255, 255, 0.9);
+      display: flex;
+      flex-direction: column;
+      z-index: 2;
+      overflow: hidden;
+    }
+
+    .hero-image-wrapper {
+      position: relative;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      flex: 1;
+      background: #F3F0EC;
+    }
+
+    .hero-image-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .hero-main-card:hover .hero-image-wrapper img {
+      transform: scale(1.05);
+    }
+
+    .hero-card-details {
+      padding: 14px 6px 4px 6px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .hero-card-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+    }
+
+    .hero-card-price {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--sunset-peach);
+    }
+
+    /* Floating Pill Badges around Hero Card */
+    .floating-badge {
+      position: absolute;
+      padding: 10px 18px;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      border-radius: var(--radius-full);
+      box-shadow: var(--shadow-md);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      z-index: 3;
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      animation: floatBadge 4s ease-in-out infinite alternate;
+    }
+
+    .floating-badge-1 {
+      top: -12px;
+      right: -10px;
+      animation-delay: 0.5s;
+    }
+
+    .floating-badge-2 {
+      bottom: 20px;
+      left: -24px;
+      animation-delay: 1.2s;
+    }
+
+    .floating-badge-3 {
+      top: 45%;
+      left: -32px;
+      animation-delay: 1.8s;
+    }
+
+    /* Background Glow Blobs */
+    .blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(60px);
+      z-index: 1;
+      pointer-events: none;
+      opacity: 0.6;
+    }
+
+    .blob-1 {
+      width: 340px;
+      height: 340px;
+      background: var(--sunset-peach);
+      top: -40px;
+      right: -40px;
+    }
+
+    .blob-2 {
+      width: 320px;
+      height: 320px;
+      background: var(--lavender-light);
+      bottom: -40px;
+      left: -20px;
+    }
+
+    /* ==========================================================================
+       OUR DESIGNS AREA (CATEGORIZED GALLERY)
+       ========================================================================== */
+    .designs-section {
+      padding: 90px 0;
+      position: relative;
+    }
+
+    /* Controls Bar: Categories, Search, Sorter */
+    .designs-controls {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      margin-bottom: 44px;
+    }
+
+    /* Category Filter Tabs */
+    .category-tabs-wrapper {
+      display: flex;
+      justify-content: center;
+      overflow-x: auto;
+      padding-bottom: 8px;
+      scrollbar-width: none;
+    }
+
+    .category-tabs-wrapper::-webkit-scrollbar {
+      display: none;
+    }
+
+    .category-tabs {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #FFFFFF;
+      padding: 8px;
+      border-radius: var(--radius-full);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-subtle);
+    }
+
+    .cat-tab-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      border-radius: var(--radius-full);
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      background: transparent;
+      transition: var(--ease-bounce);
+      white-space: nowrap;
+      position: relative;
+    }
+
+    .cat-tab-btn:hover {
+      color: var(--text-dark);
+      background: rgba(246, 248, 252, 0.9);
+    }
+
+    .cat-tab-btn.active {
+      color: #FFFFFF;
+      background: var(--sunset-gradient);
+      box-shadow: 0 6px 18px var(--sunset-glow);
+    }
+
+    .cat-tab-btn.active.tab-lavender {
+      background: var(--lavender-gradient);
+      box-shadow: 0 6px 18px var(--lavender-glow);
+    }
+
+    .cat-tab-btn.active.tab-mint {
+      background: var(--mint-gradient);
+      box-shadow: 0 6px 18px var(--mint-glow);
+    }
+
+    .cat-tab-btn.active.tab-gold {
+      background: var(--golden-gradient);
+      box-shadow: 0 6px 18px var(--golden-glow);
+      color: #1E202B;
+    }
+
+    .cat-badge-count {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 20px;
+      height: 20px;
+      padding: 0 6px;
+      border-radius: var(--radius-full);
+      font-size: 0.75rem;
+      font-weight: 700;
+      background: rgba(0, 0, 0, 0.08);
+      color: inherit;
+    }
+
+    .cat-tab-btn.active .cat-badge-count {
+      background: rgba(255, 255, 255, 0.28);
+      color: inherit;
+    }
+
+    /* Secondary Filter Bar (Search + Quick Status) */
+    .filter-subbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 12px 20px;
+    }
+
+    .search-box-wrapper {
+      position: relative;
+      flex: 1;
+      max-width: 360px;
+      min-width: 240px;
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+      font-size: 16px;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 10px 14px 10px 40px;
+      border-radius: var(--radius-full);
+      border: 1px solid var(--border-subtle);
+      background: #FFFFFF;
+      font-family: inherit;
+      font-size: 0.92rem;
+      color: var(--text-dark);
+      outline: none;
+      transition: var(--ease-smooth);
+    }
+
+    .search-input:focus {
+      border-color: var(--sunset-peach);
+      box-shadow: 0 0 0 3px rgba(255, 126, 95, 0.15);
+    }
+
+    .gallery-status-text {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+    }
+
+    /* Product Cards Grid */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 32px;
+    }
+
+    /* Product Card Component */
+    .product-card {
+      background: var(--card-white);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-subtle);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: var(--ease-smooth);
+      position: relative;
+    }
+
+    .product-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-hover);
+      border-color: rgba(255, 126, 95, 0.35);
+    }
+
+    /* Card Image Area */
+    .card-img-container {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1/1;
+      overflow: hidden;
+      background: #F7F5F2;
+    }
+
+    .card-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .product-card:hover .card-img {
+      transform: scale(1.07);
+    }
+
+    /* Category Pill on Image */
+    .card-category-badge {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      padding: 5px 12px;
+      border-radius: var(--radius-full);
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      z-index: 2;
+    }
+
+    .badge-girls { color: #E84393; border: 1px solid rgba(232, 67, 147, 0.2); }
+    .badge-boys { color: #0984E3; border: 1px solid rgba(9, 132, 227, 0.2); }
+    .badge-girls-necklaces { color: #D63031; border: 1px solid rgba(214, 48, 49, 0.2); }
+    .badge-boys-necklaces { color: #2C3E50; border: 1px solid rgba(44, 62, 80, 0.25); background: rgba(240, 244, 248, 0.95); }
+    .badge-earrings { color: #6C5CE7; border: 1px solid rgba(108, 92, 231, 0.2); }
+    .badge-special { color: #E17055; border: 1px solid rgba(225, 112, 85, 0.2); }
+
+    /* Code Tag on Image */
+    .card-code-tag {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      padding: 5px 10px;
+      border-radius: 8px;
+      font-size: 0.75rem;
+      font-family: 'Poppins', monospace;
+      font-weight: 700;
+      background: rgba(30, 32, 43, 0.85);
+      color: #FFFFFF;
+      letter-spacing: 0.5px;
+      z-index: 2;
+    }
+
+    /* Card Quick Actions Overlay */
+    .card-overlay-actions {
+      position: absolute;
+      bottom: 12px;
+      right: 12px;
+      display: flex;
+      gap: 8px;
+      z-index: 2;
+      opacity: 0;
+      transform: translateY(8px);
+      transition: var(--ease-smooth);
+    }
+
+    .product-card:hover .card-overlay-actions {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .overlay-btn {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: #FFFFFF;
+      color: var(--text-dark);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      transition: var(--ease-bounce);
+    }
+
+    .overlay-btn:hover {
+      transform: scale(1.15);
+      background: var(--sunset-peach);
+      color: #FFFFFF;
+    }
+
+    /* Card Body */
+    .card-body {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .card-title-row {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+
+    .card-title {
+      font-size: 1.12rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      line-height: 1.35;
+    }
+
+    .card-desc {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.55;
+      margin-bottom: 18px;
+      flex: 1;
+    }
+
+    /* Card Footer: Price & Order CTA */
+    .card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .card-price-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-price-label {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      color: var(--text-muted);
+    }
+
+    .card-price {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--text-dark);
+    }
+
+    .btn-order-this {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      border-radius: var(--radius-full);
+      background: var(--sunset-gradient);
+      color: #FFFFFF;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 0.92rem;
+      box-shadow: 0 4px 14px var(--sunset-glow);
+      transition: var(--ease-bounce);
+    }
+
+    .btn-order-this:hover {
+      transform: translateY(-2px) scale(1.04);
+      box-shadow: 0 8px 20px var(--sunset-glow);
+    }
+
+    /* Empty search state */
+    .no-results {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 60px 20px;
+      background: #FFFFFF;
+      border-radius: var(--radius-lg);
+      border: 1px dashed var(--border-subtle);
+    }
+
+    .no-results-icon {
+      font-size: 48px;
+      margin-bottom: 16px;
+    }
+
+    .no-results-title {
+      font-size: 1.4rem;
+      margin-bottom: 8px;
+    }
+
+    /* ==========================================================================
+       HOW TO PLACE AN ORDER (INSTRUCTIONS AREA)
+       ========================================================================== */
+    .order-section {
+      padding: 90px 0;
+      position: relative;
+    }
+
+    .order-banner-card {
+      background: linear-gradient(135deg, #FFFFFF 0%, #FFF9F6 50%, #FAF5FF 100%);
+      border-radius: var(--radius-lg);
+      border: 2px solid rgba(255, 126, 95, 0.25);
+      box-shadow: 0 20px 50px -10px rgba(255, 126, 95, 0.15);
+      padding: clamp(32px, 5vw, 64px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .order-steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      margin-bottom: 48px;
+      position: relative;
+    }
+
+    /* Step Card */
+    .step-card {
+      background: #FFFFFF;
+      border-radius: var(--radius-md);
+      padding: 32px 24px;
+      border: 1px solid var(--border-subtle);
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      transition: var(--ease-smooth);
+    }
+
+    .step-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-md);
+      border-color: rgba(255, 126, 95, 0.35);
+    }
+
+    .step-number-bubble {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 800;
+      font-size: 1.35rem;
+      color: #FFFFFF;
+      margin-bottom: 20px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .step-1-bubble { background: var(--sunset-gradient); box-shadow: 0 6px 18px var(--sunset-glow); }
+    .step-2-bubble { background: var(--lavender-gradient); box-shadow: 0 6px 18px var(--lavender-glow); }
+    .step-3-bubble { background: var(--mint-gradient); box-shadow: 0 6px 18px var(--mint-glow); }
+
+    .step-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: var(--text-dark);
+    }
+
+    .step-instruction {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .step-email-highlight {
+      font-weight: 800;
+      color: #D63031;
+      background: #FFEAEA;
+      padding: 2px 8px;
+      border-radius: 6px;
+      display: inline-block;
+      margin-top: 4px;
+    }
+
+    /* Order Action Hub (Email Box & CTA) */
+    .order-action-hub {
+      background: #FFFFFF;
+      border-radius: var(--radius-md);
+      padding: 36px;
+      border: 1px solid rgba(255, 126, 95, 0.2);
+      box-shadow: var(--shadow-md);
+      text-align: center;
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    .email-display-card {
+      display: inline-flex;
+      align-items: center;
+      gap: 16px;
+      background: #FFF5F2;
+      border: 2px dashed rgba(255, 126, 95, 0.4);
+      padding: 14px 28px;
+      border-radius: var(--radius-full);
+      margin-bottom: 28px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .email-address-text {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 800;
+      font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+      color: #1E202B;
+      letter-spacing: 0.5px;
+    }
+
+    .btn-copy-email {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      border-radius: var(--radius-full);
+      background: #FFFFFF;
+      border: 1px solid var(--border-subtle);
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--sunset-peach);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      transition: var(--ease-bounce);
+    }
+
+    .btn-copy-email:hover {
+      background: var(--sunset-peach);
+      color: #FFFFFF;
+      transform: scale(1.05);
+    }
+
+    .btn-email-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      padding: 18px 48px;
+      border-radius: var(--radius-full);
+      background: var(--magic-gradient);
+      color: #FFFFFF;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 800;
+      font-size: 1.2rem;
+      box-shadow: 0 12px 32px var(--sunset-glow);
+      transition: var(--ease-bounce);
+      margin-bottom: 20px;
+    }
+
+    .btn-email-primary:hover {
+      transform: translateY(-4px) scale(1.03);
+      box-shadow: 0 18px 40px rgba(255, 126, 95, 0.4);
+    }
+
+    .order-note {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      max-width: 580px;
+      margin: 0 auto;
+    }
+
+    /* Selected Item Quick Reminder Banner (Appears when user clicks "Order This") */
+    .selected-order-alert {
+      display: none;
+      background: #FFFFFF;
+      border: 2px solid var(--mint-green);
+      border-radius: var(--radius-md);
+      padding: 16px 24px;
+      margin-bottom: 32px;
+      box-shadow: 0 8px 24px var(--mint-glow);
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      animation: slideInDown 0.4s ease;
+    }
+
+    @keyframes slideInDown {
+      from { opacity: 0; transform: translateY(-16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .selected-alert-left {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .selected-item-thumb {
+      width: 50px;
+      height: 50px;
+      border-radius: 12px;
+      object-fit: cover;
+      border: 2px solid var(--mint-light);
+    }
+
+    .selected-alert-info h4 {
+      font-size: 1.05rem;
+      margin-bottom: 2px;
+    }
+
+    .selected-alert-info p {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+    }
+
+    .selected-alert-dismiss {
+      font-size: 20px;
+      color: var(--text-muted);
+      cursor: pointer;
+      padding: 4px;
+    }
+
+    /* ==========================================================================
+       BRAND PERKS / VALUE PROPOSITIONS
+       ========================================================================== */
+    .perks-section {
+      padding: 40px 0 80px 0;
+    }
+
+    .perks-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+    }
+
+    .perk-card {
+      background: #FFFFFF;
+      border-radius: var(--radius-md);
+      padding: 28px 24px;
+      border: 1px solid var(--border-subtle);
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+      transition: var(--ease-smooth);
+    }
+
+    .perk-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .perk-icon-box {
+      width: 50px;
+      height: 50px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      flex-shrink: 0;
+    }
+
+    .perk-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .perk-desc {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    /* ==========================================================================
+       FOOTER
+       ========================================================================== */
+    .footer {
+      background: #FFFFFF;
+      border-top: 1px solid var(--border-subtle);
+      padding: 70px 0 30px 0;
+      position: relative;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+      gap: 48px;
+      margin-bottom: 56px;
+    }
+
+    .footer-brand-col {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .footer-tagline {
+      font-size: 0.98rem;
+      color: var(--text-secondary);
+      margin: 18px 0 24px 0;
+      line-height: 1.6;
+      max-width: 320px;
+    }
+
+    .footer-col-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 22px;
+      color: var(--text-dark);
+    }
+
+    .footer-links-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .footer-link {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      transition: var(--ease-smooth);
+    }
+
+    .footer-link:hover {
+      color: var(--sunset-peach);
+      padding-left: 6px;
+    }
+
+    .footer-contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .footer-email-box {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 18px;
+      border-radius: var(--radius-sm);
+      background: #FFF5F2;
+      border: 1px solid rgba(255, 126, 95, 0.25);
+      color: var(--sunset-peach);
+      font-weight: 700;
+      font-size: 0.95rem;
+      transition: var(--ease-smooth);
+    }
+
+    .footer-email-box:hover {
+      background: var(--sunset-peach);
+      color: #FFFFFF;
+    }
+
+    /* Social Icons */
+    .social-icons-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 8px;
+    }
+
+    .social-btn {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: #FAF8F5;
+      border: 1px solid var(--border-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-dark);
+      font-size: 18px;
+      transition: var(--ease-bounce);
+    }
+
+    .social-btn:hover {
+      background: var(--sunset-gradient);
+      color: #FFFFFF;
+      transform: translateY(-3px) scale(1.1);
+      box-shadow: 0 6px 16px var(--sunset-glow);
+    }
+
+    /* Copyright Bar */
+    .footer-bottom {
+      padding-top: 28px;
+      border-top: 1px solid var(--border-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .footer-love {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* ==========================================================================
+       MODAL: QUICK VIEW / IMAGE PREVIEW
+       ========================================================================== */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 18, 25, 0.6);
+      backdrop-filter: blur(8px);
+      z-index: 2000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .modal-overlay.open {
+      display: flex;
+      opacity: 1;
+    }
+
+    .modal-container {
+      background: #FFFFFF;
+      border-radius: var(--radius-lg);
+      max-width: 780px;
+      width: 100%;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.25);
+      border: 1px solid var(--border-subtle);
+      overflow: hidden;
+      position: relative;
+      animation: modalPop 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    @keyframes modalPop {
+      0% { transform: scale(0.9) translateY(20px); opacity: 0; }
+      100% { transform: scale(1) translateY(0); opacity: 1; }
+    }
+
+    .modal-close-btn {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid var(--border-subtle);
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 10;
+      transition: var(--ease-smooth);
+    }
+
+    .modal-close-btn:hover {
+      background: #FF7E5F;
+      color: #FFFFFF;
+    }
+
+    .modal-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .modal-img-area {
+      background: #F7F5F2;
+      position: relative;
+      min-height: 380px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .modal-content-area {
+      padding: 36px 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .modal-pill {
+      display: inline-block;
+      align-self: flex-start;
+      padding: 4px 12px;
+      border-radius: var(--radius-full);
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .modal-title {
+      font-size: 1.45rem;
+      margin-bottom: 6px;
+    }
+
+    .modal-code {
+      font-family: 'Poppins', monospace;
+      font-size: 0.95rem;
+      color: var(--sunset-peach);
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    .modal-desc {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .modal-tip-box {
+      background: #FFF8E7;
+      border: 1px dashed rgba(246, 185, 59, 0.6);
+      padding: 12px;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+      color: #8C6D1F;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    /* Toast Notification */
+    .toast-notification {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #1E202B;
+      color: #FFFFFF;
+      padding: 14px 24px;
+      border-radius: var(--radius-full);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+      font-size: 0.95rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      z-index: 3000;
+      transform: translateY(100px);
+      opacity: 0;
+      transition: var(--ease-bounce);
+      pointer-events: none;
+    }
+
+    .toast-notification.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    /* ==========================================================================
+       RESPONSIVE BREAKPOINTS
+       ========================================================================== */
+    @media (max-width: 992px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        text-align: center;
+      }
+
+      .hero-subheadline {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-cta-group {
+        justify-content: center;
+      }
+
+      .hero-features {
+        justify-content: center;
+      }
+
+      .hero-card-stack {
+        max-width: 400px;
+        margin: 0 auto;
+      }
+
+      .order-steps-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+      }
+
+      .modal-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .modal-img-area {
+        min-height: 260px;
+        max-height: 300px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links, .nav-actions .btn-nav-order {
+        display: none;
+      }
+
+      .mobile-menu-btn {
+        display: flex;
+      }
+
+      .mobile-nav-drawer {
+        display: block;
+      }
+
+      .products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 20px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .floating-badge {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       NAVIGATION BAR
+       ========================================================================== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <!-- Brand Logo / Title -->
+      <a href="#home" class="brand-logo" aria-label="Necklet Jewelry Home">
+        <div class="brand-icon">
+          <span>✨</span>
+        </div>
+        <div class="brand-text">
+          Necklet<span class="brand-dot"></span>
+        </div>
+      </a>
+
+      <!-- Quick Navigation Links -->
+      <ul class="nav-links">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#designs" class="nav-link">Our Designs</a></li>
+        <li><a href="#how-to-order" class="nav-link">How to Order</a></li>
+      </ul>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <a href="#how-to-order" class="btn-nav-order">
+          <span>💌 Order Now</span>
+        </a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+          <span id="menuIcon">☰</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div class="mobile-nav-drawer" id="mobileNavDrawer">
+      <ul class="mobile-nav-links">
+        <li><a href="#home" class="nav-link mobile-link">Home</a></li>
+        <li><a href="#designs" class="nav-link mobile-link">Our Designs</a></li>
+        <li><a href="#how-to-order" class="nav-link mobile-link">How to Order</a></li>
+      </ul>
+      <div style="margin-top: 24px; text-align: center;">
+        <a href="#how-to-order" class="btn-primary mobile-link" style="width: 100%;">
+          <span>💌 Email Your Order</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       HERO SECTION
+       ========================================================================== -->
+  <section class="hero-section" id="home">
+    <div class="container">
+      <div class="hero-grid">
+        <!-- Hero Text & CTAs -->
+        <div class="hero-content">
+          <div class="hero-pill">
+            <span class="hero-pill-sparkle">🌸</span>
+            <span class="hero-pill-text">New 2026 Vibrant Collection</span>
+          </div>
+
+          <h1 class="hero-headline" aria-label="Handcrafted & Trendy Jewelry Made Just for You">
+            Handcrafted &amp; Trendy Jewelry <span class="gradient-text">Made Just for You</span>
+          </h1>
+
+          <p class="hero-subheadline">
+            Explore our colorful world of artisanal jewelry! From aesthetic girls bracelets and edgy boys bracelets to glowing earrings, layered girls necklaces, bold boys necklaces, and special statement designs handcrafted to elevate your everyday vibe.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#designs" class="btn-primary">
+              <span>Explore Designs</span>
+              <span>↓</span>
+            </a>
+            <a href="#how-to-order" class="btn-secondary">
+              <span>How to Order</span>
+              <span>✨</span>
+            </a>
+          </div>
+
+          <!-- Trust Badges Strip -->
+          <div class="hero-features">
+            <div class="feature-item">
+              <div class="feature-icon-bubble bg-peach-light">✨</div>
+              <span>100% Handcrafted</span>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon-bubble bg-lavender-light">💎</div>
+              <span>Nickel-Free &amp; Skin Safe</span>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon-bubble bg-mint-light">🛡️</div>
+              <span>Durable &amp; Tarnish-Resistant</span>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon-bubble bg-gold-light">⚡</div>
+              <span>Quick Email Ordering</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual Showcase -->
+        <div class="hero-visual">
+          <div class="blob blob-1"></div>
+          <div class="blob blob-2"></div>
+
+          <div class="hero-card-stack">
+            <!-- Floating Highlights -->
+            <div class="floating-badge floating-badge-1">
+              <span>⭐</span>
+              <span>4.9 / 5 Rating</span>
+            </div>
+            <div class="floating-badge floating-badge-2">
+              <span>🌸</span>
+              <span>Pastel Daisy Stack</span>
+            </div>
+
+            <!-- Central Product Card Showcase -->
+            <div class="hero-main-card">
+              <div class="hero-image-wrapper">
+                <img 
+                  id="heroDisplayImg"
+                  src="https://images.unsplash.com/photo-1611591475879-1c9f56475d4f?auto=format&fit=crop&w=900&q=80" 
+                  alt="Necklet Signature Pastel Bracelet"
+                  onerror="this.onerror=null; this.src=getSvgFallback('Girls Bracelets', 'Pastel Blossom Stack', '#NK-GB101');"
+                />
+              </div>
+              <div class="hero-card-details">
+                <div>
+                  <div style="font-size: 0.78rem; text-transform: uppercase; font-weight: 700; color: var(--sunset-peach); letter-spacing: 0.5px;">
+                    ✨ Featured Design #NK-GB101
+                  </div>
+                  <h3 class="hero-card-title">Pastel Blossom Beaded Bracelet</h3>
+                </div>
+                <div class="hero-card-price">₹399</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       OUR DESIGNS AREA (CATEGORIZED GALLERY)
+       ========================================================================== -->
+  <section class="designs-section" id="designs">
+    <div class="container">
+      <!-- Section Heading -->
+      <div class="section-header">
+        <div class="section-badge">
+          <span>💎 Curated Collections</span>
+        </div>
+        <h2 class="section-title">
+          Our Vibrant <span class="gradient-text">Jewelry Designs</span>
+        </h2>
+        <p class="section-desc">
+          Browse through our distinct handcrafted jewelry categories. Find the piece that speaks to your personality and style.
+        </p>
+      </div>
+
+      <!-- Controls: Category Tabs & Search Filter -->
+      <div class="designs-controls">
+        <!-- Interactive Category Filter Bar -->
+        <div class="category-tabs-wrapper">
+          <div class="category-tabs" id="categoryTabs">
+            <button class="cat-tab-btn active" data-category="all">
+              <span>✨ All</span>
+              <span class="cat-badge-count" id="count-all">24</span>
+            </button>
+            <button class="cat-tab-btn" data-category="Girls Bracelets">
+              <span>🌸 Girls Bracelets</span>
+              <span class="cat-badge-count" id="count-girls">4</span>
+            </button>
+            <button class="cat-tab-btn tab-lavender" data-category="Boys Bracelets">
+              <span>⚡ Boys Bracelets</span>
+              <span class="cat-badge-count" id="count-boys">4</span>
+            </button>
+            <button class="cat-tab-btn tab-gold" data-category="Girls Necklaces">
+              <span>🌸 Girls Necklaces</span>
+              <span class="cat-badge-count" id="count-girls-necklaces">4</span>
+            </button>
+            <button class="cat-tab-btn tab-lavender" data-category="Boys Necklaces">
+              <span>⚡ Boys Necklaces</span>
+              <span class="cat-badge-count" id="count-boys-necklaces">4</span>
+            </button>
+            <button class="cat-tab-btn tab-mint" data-category="Earrings">
+              <span>✨ Earrings</span>
+              <span class="cat-badge-count" id="count-earrings">4</span>
+            </button>
+            <button class="cat-tab-btn" data-category="Special Designs">
+              <span>🌟 Special Designs</span>
+              <span class="cat-badge-count" id="count-special">4</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Sub-filter: Live Search & Active Count -->
+        <div class="filter-subbar">
+          <div class="search-box-wrapper">
+            <span class="search-icon">🔍</span>
+            <input 
+              type="text" 
+              id="searchInput" 
+              class="search-input" 
+              placeholder="Search design name or code (e.g. #NK-101)..." 
+              aria-label="Search jewelry designs"
+            />
+          </div>
+          <div class="gallery-status-text">
+            Showing <span id="showingCount" style="color: var(--sunset-peach); font-weight: 800;">24</span> handmade pieces
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Cards Responsive Grid -->
+      <div class="products-grid" id="productsGrid">
+        <!-- Products populated dynamically via JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       HOW TO PLACE AN ORDER (INSTRUCTIONS AREA)
+       ========================================================================== -->
+  <section class="order-section" id="how-to-order">
+    <div class="container">
+      <div class="order-banner-card">
+        <!-- Selected Item Helper Alert (Triggered when user clicks "Order This") -->
+        <div class="selected-order-alert" id="selectedOrderAlert">
+          <div class="selected-alert-left">
+            <img src="" alt="Selected Design" id="selectedAlertImg" class="selected-item-thumb" />
+            <div class="selected-alert-info">
+              <h4 id="selectedAlertTitle">Design Selected!</h4>
+              <p id="selectedAlertDetails">Code: #NK-101 • Ready to order</p>
+            </div>
+          </div>
+          <button class="selected-alert-dismiss" id="dismissAlertBtn" title="Clear selection">✕</button>
+        </div>
+
+        <!-- Section Header -->
+        <div class="section-header" style="margin-bottom: 40px;">
+          <div class="section-badge" style="background: #FFF0EB;">
+            <span>💌 Simple &amp; Easy</span>
+          </div>
+          <h2 class="section-title">
+            How to <span class="gradient-sunset-text">Place an Order</span>
+          </h2>
+          <p class="section-desc">
+            Ordering your favorite Necklet piece takes just 3 simple steps. No complicated checkout forms required!
+          </p>
+        </div>
+
+        <!-- 3 Step Cards Grid -->
+        <div class="order-steps-grid">
+          <!-- Step 1 -->
+          <div class="step-card">
+            <div class="step-number-bubble step-1-bubble">1</div>
+            <h3 class="step-title">Browse &amp; Pick</h3>
+            <p class="step-instruction">
+              Step 1: Browse our Designs Area and pick your favorite jewelry piece.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="step-card">
+            <div class="step-number-bubble step-2-bubble">2</div>
+            <h3 class="step-title">Capture Your Item</h3>
+            <p class="step-instruction">
+              Step 2: Take a screenshot or save a picture of the thing you want.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="step-card">
+            <div class="step-number-bubble step-3-bubble">3</div>
+            <h3 class="step-title">Email Necklet</h3>
+            <p class="step-instruction">
+              Step 3: Email the picture of the design along with your full delivery address to <strong class="step-email-highlight">necklet2026@gmail.com</strong> to place your order!
+            </p>
+          </div>
+        </div>
+
+        <!-- Action Hub: Email Address & Big Colorful Launch Button -->
+        <div class="order-action-hub">
+          <div style="font-size: 0.9rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: var(--sunset-peach); margin-bottom: 8px;">
+            ✨ Official Necklet Order Desk
+          </div>
+
+          <!-- Highlighted Email Card -->
+          <div class="email-display-card">
+            <span style="font-size: 22px;">📧</span>
+            <span class="email-address-text">necklet2026@gmail.com</span>
+            <button class="btn-copy-email" id="btnCopyEmail" title="Copy email address to clipboard">
+              <span>📋</span>
+              <span id="copyBtnLabel">Copy Email</span>
+            </button>
+          </div>
+
+          <!-- Prominent Email Your Order Button -->
+          <div>
+            <a 
+              href="mailto:necklet2026@gmail.com?subject=Necklet%20Jewelry%20Order&body=Hello%20Necklet%20Team%2C%0A%0AI%20would%20like%20to%20order%20the%20following%20piece%3A%0A-%20Design%20Code%2FName%3A%20%0A%0A(I%20have%20attached%20a%20screenshot%20of%20the%20design%20to%20this%20email)%0A%0AMy%20Delivery%20Details%3A%0A-%20Full%20Name%3A%20%0A-%20Phone%20Number%3A%20%0A-%20Complete%20Delivery%20Address%3A%20%0A%0AThank%20you!" 
+              class="btn-email-primary" 
+              id="mainEmailOrderBtn"
+            >
+              <span>💌 Email Your Order</span>
+              <span>→</span>
+            </a>
+          </div>
+
+          <p class="order-note">
+            💡 <strong>Quick Tip:</strong> Clicking the button above opens your preferred email app with a pre-filled order draft. Simply attach your screenshot, add your address, and press send!
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       WHY CHOOSE NECKLET (BRAND PERKS)
+       ========================================================================== -->
+  <section class="perks-section">
+    <div class="container">
+      <div class="perks-grid">
+        <div class="perk-card">
+          <div class="perk-icon-box bg-peach-light">🌸</div>
+          <div>
+            <h4 class="perk-title">100% Handcrafted</h4>
+            <p class="perk-desc">Every bead, wire, and clasp is curated and assembled with meticulous passion.</p>
+          </div>
+        </div>
+
+        <div class="perk-card">
+          <div class="perk-icon-box bg-lavender-light">✨</div>
+          <div>
+            <h4 class="perk-title">Hypoallergenic Metals</h4>
+            <p class="perk-desc">Lead-free, nickel-free, and skin-sensitive materials comfortable for all-day wear.</p>
+          </div>
+        </div>
+
+        <div class="perk-card">
+          <div class="perk-icon-box bg-mint-light">💎</div>
+          <div>
+            <h4 class="perk-title">Durable Daily Wear</h4>
+            <p class="perk-desc">Crafted with high-grade cords, stainless steel, and long-lasting lustrous finishes.</p>
+          </div>
+        </div>
+
+        <div class="perk-card">
+          <div class="perk-icon-box bg-gold-light">⚡</div>
+          <div>
+            <h4 class="perk-title">Fast &amp; Safe Dispatch</h4>
+            <p class="perk-desc">Carefully inspected, securely packed, and dispatched promptly to your address.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Brand & Tagline -->
+        <div class="footer-brand-col">
+          <a href="#home" class="brand-logo" style="margin-bottom: 4px;">
+            <div class="brand-icon">
+              <span>✨</span>
+            </div>
+            <div class="brand-text">
+              Necklet<span class="brand-dot"></span>
+            </div>
+          </a>
+          <p class="footer-tagline">
+            Vibrant, stylish, and welcoming handcrafted jewelry made just for you. Spreading everyday joy and colorful confidence.
+          </p>
+          <div class="social-icons-group">
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="social-btn" title="Follow Necklet on Instagram">📸</a>
+            <a href="https://tiktok.com" target="_blank" rel="noopener" class="social-btn" title="Follow Necklet on TikTok">🎵</a>
+            <a href="https://pinterest.com" target="_blank" rel="noopener" class="social-btn" title="Follow Necklet on Pinterest">📌</a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="social-btn" title="Follow Necklet on Facebook">📘</a>
+            <a href="https://whatsapp.com" target="_blank" rel="noopener" class="social-btn" title="Message Necklet on WhatsApp">💬</a>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="#home" class="footer-link">Home</a></li>
+            <li><a href="#designs" class="footer-link">Our Designs</a></li>
+            <li><a href="#how-to-order" class="footer-link">How to Order</a></li>
+            <li><a href="#designs" class="footer-link" onclick="setCategoryFilter('Special Designs')">Special Designs</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Jewelry Categories -->
+        <div>
+          <h4 class="footer-col-title">Collections</h4>
+          <ul class="footer-links-list">
+            <li><a href="#designs" class="footer-link" onclick="setCategoryFilter('Girls Bracelets')">Girls Bracelets</a></li>
+            <li><a href="#designs" class="footer-link" onclick="setCategoryFilter('Boys Bracelets')">Boys Bracelets</a></li>
+            <li><a href="#designs" class="footer-link" onclick="setCategoryFilter('Girls Necklaces')">Girls Necklaces</a></li>
+            <li><a href="#designs" class="footer-link" onclick="setCategoryFilter('Boys Necklaces')">Boys Necklaces</a></li>
+            <li><a href="#designs" class="footer-link" onclick="setCategoryFilter('Earrings')">Earrings</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact & Order Email -->
+        <div>
+          <h4 class="footer-col-title">Place Your Order</h4>
+          <div class="footer-contact-info">
+            <p style="font-size: 0.92rem; color: var(--text-secondary);">
+              Send your design screenshot &amp; shipping address directly to:
+            </p>
+            <a href="mailto:necklet2026@gmail.com" class="footer-email-box">
+              <span>📧</span>
+              <span>necklet2026@gmail.com</span>
+            </a>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">
+              ⚡ Responses within 2-4 hours. Delivery worldwide.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 <strong>Necklet</strong>. All rights reserved.
+        </div>
+        <div class="footer-love">
+          Handcrafted with <span style="color: #FF7E5F;">❤️</span> &amp; vibrant pastel joy.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       MODAL: QUICK VIEW / DESIGN DETAILS
+       ========================================================================== -->
+  <div class="modal-overlay" id="productModal" role="dialog" aria-modal="true">
+    <div class="modal-container">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal">✕</button>
+      <div class="modal-grid">
+        <div class="modal-img-area">
+          <img src="" alt="Jewelry Design" id="modalImg" class="modal-img" />
+        </div>
+        <div class="modal-content-area">
+          <div>
+            <span class="modal-pill" id="modalCategoryBadge">Category</span>
+            <h3 class="modal-title" id="modalTitle">Design Name</h3>
+            <div class="modal-code" id="modalCode">Code: #NK-101</div>
+            <p class="modal-desc" id="modalDesc">Detailed description of the piece and craftsmanship.</p>
+            
+            <div class="modal-tip-box">
+              <span>📸</span>
+              <span><strong>Ordering Tip:</strong> Take a quick screenshot of this window now for Step 2!</span>
+            </div>
+          </div>
+
+          <div class="card-footer" style="padding-top: 18px;">
+            <div class="card-price-group">
+              <span class="card-price-label">Price</span>
+              <span class="card-price" id="modalPrice">₹0</span>
+            </div>
+            <button class="btn-order-this" id="modalOrderBtn">
+              <span>Order This</span>
+              <span>💌</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Bar -->
+  <div class="toast-notification" id="toast">
+    <span id="toastIcon">✨</span>
+    <span id="toastMsg">Notification message</span>
+  </div>
+
+  <!-- ==========================================================================
+       JAVASCRIPT APPLICATION LOGIC
+       ========================================================================== -->
+  <script>
+    /* ==========================================================================
+       1. PRODUCT CATALOG DATA (20 Detailed Products Across 5 Categories)
+       ========================================================================== */
+    const PRODUCTS = [
+      /* Girls Bracelets */
+      {
+        id: "NK-GB101",
+        code: "#NK-GB101",
+        name: "Pastel Blossom Beaded Bracelet",
+        category: "Girls Bracelets",
+        price: "₹399",
+        numericPrice: 399,
+        badgeClass: "badge-girls",
+        description: "Handcrafted frosted pastel glass beads interspersed with 18k gold-plated daisy spacers and a gentle magnetic clasp.",
+        image: "https://images.unsplash.com/photo-1611591475879-1c9f56475d4f?auto=format&fit=crop&w=800&q=80",
+        details: "Featuring candy peach, mint, and lilac beads. Hypoallergenic, 7-inch standard length with 1-inch extender."
+      },
+      {
+        id: "NK-GB102",
+        code: "#NK-GB102",
+        name: "Celestial Dainty Pearl Charm",
+        category: "Girls Bracelets",
+        price: "₹499",
+        numericPrice: 499,
+        badgeClass: "badge-girls",
+        description: "Lustrous freshwater seed pearls paired with delicate golden crescent moon & shimmering star micro-charms.",
+        image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80",
+        details: "Real Grade-AA freshwater seed pearls on durable braided silk cord with lobster clasp."
+      },
+      {
+        id: "NK-GB103",
+        code: "#NK-GB103",
+        name: "Strawberry Quartz Silk Macramé",
+        category: "Girls Bracelets",
+        price: "₹449",
+        numericPrice: 449,
+        badgeClass: "badge-girls",
+        description: "Genuine natural strawberry quartz crystals hand-woven with adjustable blush pink silk cord and rose-gold accent beads.",
+        image: "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=800&q=80",
+        details: "Known for promoting love and joy. Waterproof silk cord with effortless slide adjustability."
+      },
+      {
+        id: "NK-GB104",
+        code: "#NK-GB104",
+        name: "Sunset Candy Y2K Smiley Stack",
+        category: "Girls Bracelets",
+        price: "₹349",
+        numericPrice: 349,
+        badgeClass: "badge-girls",
+        description: "Playful retro polymer clay flower beads, bright yellow smiley face charms, and sunny golden yellow accents.",
+        image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=800&q=80",
+        details: "Stretchy comfortable fit, super lightweight and fun for summer everyday styling."
+      },
+
+      /* Boys Bracelets */
+      {
+        id: "NK-BB201",
+        code: "#NK-BB201",
+        name: "Midnight Braided Leather Cuff",
+        category: "Boys Bracelets",
+        price: "₹599",
+        numericPrice: 599,
+        badgeClass: "badge-boys",
+        description: "Double-woven full grain black Italian leather with a brushed matte black titanium magnetic sliding clasp.",
+        image: "https://images.unsplash.com/photo-1620656798579-1984d9e87dfa?auto=format&fit=crop&w=800&q=80",
+        details: "Clean, masculine minimalist design. High durability, sweatproof and comfortable."
+      },
+      {
+        id: "NK-BB202",
+        code: "#NK-BB202",
+        name: "Matte Onyx & Golden Tiger Eye",
+        category: "Boys Bracelets",
+        price: "₹549",
+        numericPrice: 549,
+        badgeClass: "badge-boys",
+        description: "8mm raw volcanic basalt stones paired with matte satin black onyx and shimmering golden-brown tiger eye beads.",
+        image: "https://images.unsplash.com/photo-1598560917505-59a3ad559071?auto=format&fit=crop&w=800&q=80",
+        details: "Double elastic silicone core. Grounding stones that symbolize courage and focus."
+      },
+      {
+        id: "NK-BB203",
+        code: "#NK-BB203",
+        name: "Minimalist Urban Rope Chain",
+        category: "Boys Bracelets",
+        price: "₹649",
+        numericPrice: 649,
+        badgeClass: "badge-boys",
+        description: "316L hypoallergenic surgical stainless steel diamond-cut rope link bracelet. 100% waterproof and tarnish-proof.",
+        image: "https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?auto=format&fit=crop&w=800&q=80",
+        details: "Precision lobster claw clasp. Wear it swimming, showering, or working out without discoloration."
+      },
+      {
+        id: "NK-BB204",
+        code: "#NK-BB204",
+        name: "Tactical Sea & Anchor Shackle",
+        category: "Boys Bracelets",
+        price: "₹449",
+        numericPrice: 449,
+        badgeClass: "badge-boys",
+        description: "Weather-resistant 550 navy blue paracord woven around a solid brushed stainless steel marine anchor shackle.",
+        image: "https://images.unsplash.com/photo-1506630448388-4e683c67ddb0?auto=format&fit=crop&w=800&q=80",
+        details: "Adjustable 3-hole pin shackle. Rugged outdoor aesthetic with maritime flair."
+      },
+
+      /* Girls Necklaces */
+      {
+        id: "NK-NK401",
+        code: "#NK-NK401",
+        name: "Golden Hour Layered Chain Duo",
+        category: "Girls Necklaces",
+        price: "₹749",
+        numericPrice: 749,
+        badgeClass: "badge-girls-necklaces",
+        description: "Double-strand 18k gold-plated snake chain paired seamlessly with an airy paperclip toggle chain.",
+        image: "https://images.unsplash.com/photo-1599643477877-530eb83abc8e?auto=format&fit=crop&w=800&q=80",
+        details: "Pre-layered two-in-one necklace with single tangle-free clasp. 16\" + 18\" cascade."
+      },
+      {
+        id: "NK-NK402",
+        code: "#NK-NK402",
+        name: "Ocean Breeze Turquoise Choker",
+        category: "Girls Necklaces",
+        price: "₹599",
+        numericPrice: 599,
+        badgeClass: "badge-girls-necklaces",
+        description: "Natural Mediterranean sea-sediment turquoise beads accented with molten raw gold nugget spacer disks.",
+        image: "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=800&q=80",
+        details: "Vibrant coastal charm. Waterproof cord with 2-inch extender chain."
+      },
+      {
+        id: "NK-NK403",
+        code: "#NK-NK403",
+        name: "Lavender Mist Opalite Pendant",
+        category: "Girls Necklaces",
+        price: "₹699",
+        numericPrice: 699,
+        badgeClass: "badge-girls-necklaces",
+        description: "Glowing ethereal translucent opalite crystal wrapped in delicate silver filigree wire on an 18-inch chain.",
+        image: "https://images.unsplash.com/photo-1600003014755-ba31aa59c4b6?auto=format&fit=crop&w=800&q=80",
+        details: "Changes color in sunlight from misty blue to glowing golden amber."
+      },
+      {
+        id: "NK-NK404",
+        code: "#NK-NK404",
+        name: "Sunset Coral & Pearl Collar",
+        category: "Girls Necklaces",
+        price: "₹799",
+        numericPrice: 799,
+        badgeClass: "badge-girls-necklaces",
+        description: "Hand-strung genuine baroque freshwater pearls smoothly transitioning into warm peach coral roundels.",
+        image: "https://images.unsplash.com/photo-1506630448388-4e683c67ddb0?auto=format&fit=crop&w=800&q=80",
+        details: "Luxury artisan look. Finished with an 18k gold vermeil ball clasp."
+      },
+
+      /* Boys Necklaces */
+      {
+        id: "NK-BN601",
+        code: "#NK-BN601",
+        name: "Midnight Obsidian Dog Tag Pendant",
+        category: "Boys Necklaces",
+        price: "₹649",
+        numericPrice: 649,
+        badgeClass: "badge-boys-necklaces",
+        description: "Sleek 316L stainless steel military dog tag inlaid with polished natural volcanic obsidian on a 24-inch curb chain.",
+        image: "https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?auto=format&fit=crop&w=800&q=80",
+        details: "Hypoallergenic, sweat-resistant, and tarnish-free. Designed for comfortable everyday wear."
+      },
+      {
+        id: "NK-BN602",
+        code: "#NK-BN602",
+        name: "Urban Cuban Curb Link Chain",
+        category: "Boys Necklaces",
+        price: "₹699",
+        numericPrice: 699,
+        badgeClass: "badge-boys-necklaces",
+        description: "Bold 6mm diamond-cut bevelled Cuban curb link chain forged in premium high-shine silver surgical stainless steel.",
+        image: "https://images.unsplash.com/photo-1599643477877-530eb83abc8e?auto=format&fit=crop&w=800&q=80",
+        details: "Classic streetwear essential. 22-inch length with secure heavy-duty lobster clasp."
+      },
+      {
+        id: "NK-BN603",
+        code: "#NK-BN603",
+        name: "Nordic Compass Medallion Cord",
+        category: "Boys Necklaces",
+        price: "₹599",
+        numericPrice: 599,
+        badgeClass: "badge-boys-necklaces",
+        description: "Vintage brushed gunmetal silver coin pendant engraved with the Vegvisir wayfinder compass on durable braided cord.",
+        image: "https://images.unsplash.com/photo-1506630448388-4e683c67ddb0?auto=format&fit=crop&w=800&q=80",
+        details: "Symbol of protection and direction. Adjustable slide knot fits from 18 to 26 inches."
+      },
+      {
+        id: "NK-BN604",
+        code: "#NK-BN604",
+        name: "Matte Hematite & Tiger Eye Bead Collar",
+        category: "Boys Necklaces",
+        price: "₹649",
+        numericPrice: 649,
+        badgeClass: "badge-boys-necklaces",
+        description: "6mm masculine bead necklace strung with magnetic gunmetal hematite, matte black onyx, and warm golden tiger eye.",
+        image: "https://images.unsplash.com/photo-1598560917505-59a3ad559071?auto=format&fit=crop&w=800&q=80",
+        details: "Double strung on stainless steel wire with screw barrel lock. 20-inch collar drape."
+      },
+
+      /* Earrings */
+      {
+        id: "NK-ER301",
+        code: "#NK-ER301",
+        name: "Sunset Aura Iridescent Hoops",
+        category: "Earrings",
+        price: "₹449",
+        numericPrice: 449,
+        badgeClass: "badge-earrings",
+        description: "Lightweight chunky translucent peach and soft lavender resin hoops flecked with luminous 24k gold leaf flakes.",
+        image: "https://images.unsplash.com/photo-1630019852942-f89202989a59?auto=format&fit=crop&w=800&q=80",
+        details: "Featherlight design for zero ear fatigue. Surgical steel hypoallergenic posts."
+      },
+      {
+        id: "NK-ER302",
+        code: "#NK-ER302",
+        name: "Blushing Daisy Ceramic Studs",
+        category: "Earrings",
+        price: "₹399",
+        numericPrice: 399,
+        badgeClass: "badge-earrings",
+        description: "Hand-sculpted pastel mint ceramic flower petals with warm golden peach center. Subtle and wonderfully aesthetic.",
+        image: "https://images.unsplash.com/photo-1535632787350-4e68ef0ac584?auto=format&fit=crop&w=800&q=80",
+        details: "Glazed stoneware ceramic with titanium posts. Perfect for sensitive ears."
+      },
+      {
+        id: "NK-ER303",
+        code: "#NK-ER303",
+        name: "Gilded Waterfall Statement Drops",
+        category: "Earrings",
+        price: "₹699",
+        numericPrice: 699,
+        badgeClass: "badge-earrings",
+        description: "Hammered golden brass tiers cascading downward with faceted teardrops of natural lavender amethyst crystals.",
+        image: "https://images.unsplash.com/photo-1635767798638-3e25273a8236?auto=format&fit=crop&w=800&q=80",
+        details: "Eye-catching movement and gorgeous light reflection for parties, dates, or evening wear."
+      },
+      {
+        id: "NK-ER304",
+        code: "#NK-ER304",
+        name: "Lilac Butterfly Crystal Huggies",
+        category: "Earrings",
+        price: "₹499",
+        numericPrice: 499,
+        badgeClass: "badge-earrings",
+        description: "14k gold-vermeil mini huggie hoops featuring sparkling pavé lilac zirconia butterfly drops that catch the light.",
+        image: "https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?auto=format&fit=crop&w=800&q=80",
+        details: "Secure click-latch closure. Wear alone or stacked with multiple ear piercings."
+      },
+
+      /* Special Designs */
+      {
+        id: "NK-SP501",
+        code: "#NK-SP501",
+        name: "Custom Nameplate Charm Choker",
+        category: "Special Designs",
+        price: "₹849",
+        numericPrice: 849,
+        badgeClass: "badge-special",
+        description: "Personalized hand-stamped letter coins framed by micro freshwater pearls and pastel zirconia charms.",
+        image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=800&q=80",
+        details: "Specify your desired name or letters (up to 8 characters) in your order email!"
+      },
+      {
+        id: "NK-SP502",
+        code: "#NK-SP502",
+        name: "Bohemian Sunburst Body Chain",
+        category: "Special Designs",
+        price: "₹999",
+        numericPrice: 999,
+        badgeClass: "badge-special",
+        description: "Radiant golden chest and waist multi-chain adorned with dainty celestial sun coins and delicate bells.",
+        image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=800&q=80",
+        details: "Festival and beach essential. Adjustable clasps fit waist sizes 24\" to 36\"."
+      },
+      {
+        id: "NK-SP503",
+        code: "#NK-SP503",
+        name: "Starry Night Sculpted Brass Cuff",
+        category: "Special Designs",
+        price: "₹899",
+        numericPrice: 899,
+        badgeClass: "badge-special",
+        description: "Adjustable upper-arm cuff hand-forged in raw golden brass and centered with celestial deep-blue lapis lazuli.",
+        image: "https://images.unsplash.com/photo-1611591475879-1c9f56475d4f?auto=format&fit=crop&w=800&q=80",
+        details: "Limited artisan batch. Bendable structure effortlessly conforms to arm contours."
+      },
+      {
+        id: "NK-SP504",
+        code: "#NK-SP504",
+        name: "Soulmate Magnetic Bond Duo",
+        category: "Special Designs",
+        price: "₹749",
+        numericPrice: 749,
+        badgeClass: "badge-special",
+        description: "Matching his & hers / best friend bracelet set with interlocking magnetic half-hearts and custom initials.",
+        image: "https://images.unsplash.com/photo-1620656798579-1984d9e87dfa?auto=format&fit=crop&w=800&q=80",
+        details: "Comes as a pair (one pastel peach cord, one midnight black rope) with magnetic attraction."
+      }
+    ];
+
+    /* ==========================================================================
+       2. SVG FALLBACK GENERATOR (Works 100% offline or if image fails)
+       ========================================================================== */
+    function getSvgFallback(category, name, code) {
+      let grad1 = "#FF7E5F", grad2 = "#FEB47B", icon = "💎";
+      if (category === "Girls Bracelets") {
+        grad1 = "#FF7E5F"; grad2 = "#FBC2EB"; icon = "🌸";
+      } else if (category === "Boys Bracelets") {
+        grad1 = "#2C3E50"; grad2 = "#4CA1AF"; icon = "⚡";
+      } else if (category === "Girls Necklaces" || category === "Necklaces") {
+        grad1 = "#F6B93B"; grad2 = "#FF7E5F"; icon = "🌸";
+      } else if (category === "Boys Necklaces") {
+        grad1 = "#2C3E50"; grad2 = "#4CA1AF"; icon = "⚡";
+      } else if (category === "Earrings") {
+        grad1 = "#A18CD1"; grad2 = "#FBC2EB"; icon = "✨";
+      } else if (category === "Special Designs") {
+        grad1 = "#FF6B6B"; grad2 = "#84FAB0"; icon = "🌟";
+      }
+
+      const svgString = `
+        <svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
+          <defs>
+            <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="${grad1}"/>
+              <stop offset="100%" stop-color="${grad2}"/>
+            </linearGradient>
+            <filter id="shadow">
+              <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="rgba(0,0,0,0.15)"/>
+            </filter>
+          </defs>
+          <rect width="600" height="600" fill="#FAF8F5"/>
+          <circle cx="300" cy="270" r="180" fill="url(#g)" opacity="0.18"/>
+          <circle cx="300" cy="270" r="140" fill="#FFFFFF" filter="url(#shadow)"/>
+          <circle cx="300" cy="270" r="110" fill="url(#g)" opacity="0.85"/>
+          <text x="300" y="295" font-family="'Poppins', sans-serif" font-size="80" text-anchor="middle" fill="#FFFFFF">${icon}</text>
+          <rect x="150" y="450" width="300" height="40" rx="20" fill="#1E202B"/>
+          <text x="300" y="476" font-family="'Poppins', sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#FFFFFF">${code}</text>
+          <text x="300" y="525" font-family="'Poppins', sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#1E202B">${name}</text>
+        </svg>
+      `;
+      return "data:image/svg+xml;charset=utf-8," + encodeURIComponent(svgString);
+    }
+
+    /* ==========================================================================
+       3. DOM ELEMENTS & STATE
+       ========================================================================== */
+    let currentCategory = "all";
+    let searchQuery = "";
+    let selectedProduct = null;
+
+    const productsGrid = document.getElementById("productsGrid");
+    const categoryTabs = document.getElementById("categoryTabs");
+    const searchInput = document.getElementById("searchInput");
+    const showingCount = document.getElementById("showingCount");
+    const selectedOrderAlert = document.getElementById("selectedOrderAlert");
+    const selectedAlertImg = document.getElementById("selectedAlertImg");
+    const selectedAlertTitle = document.getElementById("selectedAlertTitle");
+    const selectedAlertDetails = document.getElementById("selectedAlertDetails");
+    const dismissAlertBtn = document.getElementById("dismissAlertBtn");
+    const btnCopyEmail = document.getElementById("btnCopyEmail");
+    const copyBtnLabel = document.getElementById("copyBtnLabel");
+    const mainEmailOrderBtn = document.getElementById("mainEmailOrderBtn");
+    const toast = document.getElementById("toast");
+    const toastMsg = document.getElementById("toastMsg");
+    const toastIcon = document.getElementById("toastIcon");
+
+    /* Modal Elements */
+    const productModal = document.getElementById("productModal");
+    const modalCloseBtn = document.getElementById("modalCloseBtn");
+    const modalImg = document.getElementById("modalImg");
+    const modalCategoryBadge = document.getElementById("modalCategoryBadge");
+    const modalTitle = document.getElementById("modalTitle");
+    const modalCode = document.getElementById("modalCode");
+    const modalDesc = document.getElementById("modalDesc");
+    const modalPrice = document.getElementById("modalPrice");
+    const modalOrderBtn = document.getElementById("modalOrderBtn");
+
+    /* Mobile Menu Elements */
+    const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+    const mobileNavDrawer = document.getElementById("mobileNavDrawer");
+    const menuIcon = document.getElementById("menuIcon");
+
+    /* ==========================================================================
+       4. RENDER PRODUCTS
+       ========================================================================== */
+    function renderProducts() {
+      // Filter logic
+      const filtered = PRODUCTS.filter(product => {
+        const matchesCategory = (currentCategory === "all") || (product.category === currentCategory);
+        const matchesSearch = searchQuery === "" || 
+          product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          product.code.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          product.description.toLowerCase().includes(searchQuery.toLowerCase());
+        return matchesCategory && matchesSearch;
+      });
+
+      showingCount.textContent = filtered.length;
+
+      if (filtered.length === 0) {
+        productsGrid.innerHTML = `
+          <div class="no-results">
+            <div class="no-results-icon">🔍</div>
+            <h3 class="no-results-title">No jewelry designs found</h3>
+            <p style="color: var(--text-secondary); margin-bottom: 20px;">
+              We couldn't find any piece matching "${searchQuery}". Try searching for another name, design code like #NK-101, or switch category.
+            </p>
+            <button class="btn-primary" onclick="resetFilters()">View All Designs</button>
+          </div>
+        `;
+        return;
+      }
+
+      // Generate HTML for cards
+      productsGrid.innerHTML = filtered.map(product => {
+        return `
+          <div class="product-card" data-id="${product.id}">
+            <div class="card-img-container">
+              <span class="card-category-badge ${product.badgeClass}">${product.category}</span>
+              <span class="card-code-tag">${product.code}</span>
+              <img 
+                src="${product.image}" 
+                alt="${product.name}" 
+                class="card-img" 
+                loading="lazy"
+                onerror="this.onerror=null; this.src=getSvgFallback('${product.category}', '${product.name.replace(/'/g, "\\'")}', '${product.code}');"
+              />
+              <div class="card-overlay-actions">
+                <button class="overlay-btn" title="Quick View" onclick="openQuickView('${product.id}')">
+                  👁️
+                </button>
+                <button class="overlay-btn" title="Copy Design Code" onclick="copyDesignCode('${product.code}')">
+                  📋
+                </button>
+              </div>
+            </div>
+
+            <div class="card-body">
+              <div class="card-title-row">
+                <h3 class="card-title">${product.name}</h3>
+              </div>
+              <p class="card-desc">${product.description}</p>
+              
+              <div class="card-footer">
+                <div class="card-price-group">
+                  <span class="card-price-label">Price</span>
+                  <span class="card-price">${product.price}</span>
+                </div>
+                <button class="btn-order-this" onclick="selectAndOrderProduct('${product.id}')">
+                  <span>Order This</span>
+                  <span>💌</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    /* ==========================================================================
+       5. FILTER & SEARCH HANDLERS
+       ========================================================================== */
+    // Category tabs click handler
+    categoryTabs.addEventListener("click", (e) => {
+      const btn = e.target.closest(".cat-tab-btn");
+      if (!btn) return;
+
+      document.querySelectorAll(".cat-tab-btn").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+
+      currentCategory = btn.dataset.category;
+      renderProducts();
+    });
+
+    // Search input handler
+    searchInput.addEventListener("input", (e) => {
+      searchQuery = e.target.value.trim();
+      renderProducts();
+    });
+
+    function resetFilters() {
+      searchInput.value = "";
+      searchQuery = "";
+      currentCategory = "all";
+      document.querySelectorAll(".cat-tab-btn").forEach(b => b.classList.remove("active"));
+      document.querySelector('.cat-tab-btn[data-category="all"]').classList.add("active");
+      renderProducts();
+    }
+
+    function setCategoryFilter(catName) {
+      currentCategory = catName;
+      document.querySelectorAll(".cat-tab-btn").forEach(b => {
+        if (b.dataset.category === catName) {
+          b.classList.add("active");
+        } else {
+          b.classList.remove("active");
+        }
+      });
+      renderProducts();
+      // Scroll to designs
+      document.getElementById("designs").scrollIntoView({ behavior: 'smooth' });
+    }
+
+    /* ==========================================================================
+       6. "ORDER THIS" INTERACTION & EMAIL COMPOSER
+       ========================================================================== */
+    function selectAndOrderProduct(productId) {
+      const product = PRODUCTS.find(p => p.id === productId);
+      if (!product) return;
+
+      selectedProduct = product;
+
+      // Update selected alert banner
+      selectedAlertImg.src = product.image;
+      selectedAlertImg.onerror = function() {
+        this.src = getSvgFallback(product.category, product.name, product.code);
+      };
+      selectedAlertTitle.textContent = `Selected: ${product.name}`;
+      selectedAlertDetails.textContent = `Design Code: ${product.code} (${product.category}) • ${product.price}`;
+      selectedOrderAlert.style.display = "flex";
+
+      // Customize the Mailto Link
+      const subject = encodeURIComponent(`Necklet Order for ${product.code} - ${product.name}`);
+      const body = encodeURIComponent(
+`Hello Necklet Team,
+
+I would like to place an order for this jewelry piece:
+- Design Name: ${product.name}
+- Design Code: ${product.code}
+- Category: ${product.category}
+- Price: ${product.price}
+
+(I have attached a screenshot of this piece to this email)
+
+My Delivery Details:
+- Full Name: 
+- Phone Number: 
+- Complete Delivery Address: 
+
+Thank you! I am looking forward to receiving my handcrafted piece.`
+      );
+
+      mainEmailOrderBtn.href = `mailto:necklet2026@gmail.com?subject=${subject}&body=${body}`;
+
+      // Smooth scroll to How to Order section
+      const orderSection = document.getElementById("how-to-order");
+      orderSection.scrollIntoView({ behavior: 'smooth' });
+
+      // Highlight the order banner with a slight pulse
+      const orderCard = document.querySelector(".order-banner-card");
+      orderCard.style.transition = "transform 0.4s ease, box-shadow 0.4s ease";
+      orderCard.style.boxShadow = "0 0 40px rgba(255, 126, 95, 0.45)";
+      setTimeout(() => {
+        orderCard.style.boxShadow = "";
+      }, 1500);
+
+      showToast(`Selected ${product.code}! Follow Step 2 & 3 below to complete your order.`, "💌");
+    }
+
+    dismissAlertBtn.addEventListener("click", () => {
+      selectedOrderAlert.style.display = "none";
+      selectedProduct = null;
+      // Reset email button to default
+      mainEmailOrderBtn.href = `mailto:necklet2026@gmail.com?subject=Necklet%20Jewelry%20Order&body=Hello%20Necklet%20Team%2C%0A%0AI%20would%20like%20to%20order%20the%20following%20piece%3A%0A-%20Design%20Code%2FName%3A%20%0A%0A(I%20have%20attached%20a%20screenshot%20of%20the%20design%20to%20this%20email)%0A%0AMy%20Delivery%20Details%3A%0A-%20Full%20Name%3A%20%0A-%20Phone%20Number%3A%20%0A-%20Complete%20Delivery%20Address%3A%20%0A%0AThank%20you!`;
+    });
+
+    // Ensure email draft is always strictly formatted on click
+    mainEmailOrderBtn.addEventListener("click", () => {
+      let subject = "Necklet Jewelry Order";
+      let body = "";
+      if (selectedProduct) {
+        subject = `Necklet Order for ${selectedProduct.code} - ${selectedProduct.name}`;
+        body = `Hello Necklet Team,\n\nI would like to place an order for this jewelry piece:\n- Design Name: ${selectedProduct.name}\n- Design Code: ${selectedProduct.code}\n- Category: ${selectedProduct.category}\n- Price: ${selectedProduct.price}\n\n(I have attached a screenshot of this piece to this email)\n\nMy Delivery Details:\n- Full Name: \n- Phone Number: \n- Complete Delivery Address: \n\nThank you! I am looking forward to receiving my handcrafted piece.`;
+      } else {
+        subject = "Necklet Jewelry Order";
+        body = `Hello Necklet Team,\n\nI would like to order the following piece:\n- Design Code/Name: \n\n(I have attached a screenshot of the design to this email)\n\nMy Delivery Details:\n- Full Name: \n- Phone Number: \n- Complete Delivery Address: \n\nThank you!`;
+      }
+      mainEmailOrderBtn.href = `mailto:necklet2026@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    });
+
+    /* ==========================================================================
+       7. QUICK VIEW MODAL
+       ========================================================================== */
+    function openQuickView(productId) {
+      const product = PRODUCTS.find(p => p.id === productId);
+      if (!product) return;
+
+      modalImg.src = product.image;
+      modalImg.onerror = function() {
+        this.src = getSvgFallback(product.category, product.name, product.code);
+      };
+      modalTitle.textContent = product.name;
+      modalCode.textContent = `Design Code: ${product.code}`;
+      modalDesc.innerHTML = `${product.description}<br><br><span style="color: var(--text-dark); font-weight: 600;">Details:</span> ${product.details}`;
+      modalPrice.textContent = product.price;
+
+      modalCategoryBadge.textContent = product.category;
+      modalCategoryBadge.className = `modal-pill ${product.badgeClass}`;
+
+      modalOrderBtn.onclick = function() {
+        closeModal();
+        selectAndOrderProduct(product.id);
+      };
+
+      productModal.classList.add("open");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeModal() {
+      productModal.classList.remove("open");
+      document.body.style.overflow = "";
+    }
+
+    modalCloseBtn.addEventListener("click", closeModal);
+    productModal.addEventListener("click", (e) => {
+      if (e.target === productModal) closeModal();
+    });
+    window.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && productModal.classList.contains("open")) {
+        closeModal();
+      }
+    });
+
+    /* ==========================================================================
+       8. UTILITIES: COPY EMAIL & DESIGN CODE & TOAST
+       ========================================================================== */
+    btnCopyEmail.addEventListener("click", () => {
+      const email = "necklet2026@gmail.com";
+      navigator.clipboard.writeText(email).then(() => {
+        copyBtnLabel.textContent = "Copied! ✨";
+        btnCopyEmail.style.background = "var(--sunset-peach)";
+        btnCopyEmail.style.color = "#FFFFFF";
+        showToast("Email address necklet2026@gmail.com copied to clipboard!", "📋");
+        setTimeout(() => {
+          copyBtnLabel.textContent = "Copy Email";
+          btnCopyEmail.style.background = "";
+          btnCopyEmail.style.color = "";
+        }, 2200);
+      }).catch(err => {
+        showToast("necklet2026@gmail.com", "📧");
+      });
+    });
+
+    function copyDesignCode(code) {
+      navigator.clipboard.writeText(code).then(() => {
+        showToast(`Design code ${code} copied!`, "✨");
+      });
+    }
+
+    function showToast(message, icon = "✨") {
+      toastMsg.textContent = message;
+      toastIcon.textContent = icon;
+      toast.classList.add("show");
+      setTimeout(() => {
+        toast.classList.remove("show");
+      }, 3500);
+    }
+
+    /* ==========================================================================
+       9. MOBILE DRAWER TOGGLE & NAVBAR SCROLL EFFECT
+       ========================================================================== */
+    mobileMenuBtn.addEventListener("click", () => {
+      mobileNavDrawer.classList.toggle("open");
+      menuIcon.textContent = mobileNavDrawer.classList.contains("open") ? "✕" : "☰";
+    });
+
+    document.querySelectorAll(".mobile-link").forEach(link => {
+      link.addEventListener("click", () => {
+        mobileNavDrawer.classList.remove("open");
+        menuIcon.textContent = "☰";
+      });
+    });
+
+    // Sticky navbar shadow on scroll
+    window.addEventListener("scroll", () => {
+      const navbar = document.getElementById("navbar");
+      if (window.scrollY > 20) {
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled");
+      }
+    });
+
+    // Initial render
+    renderProducts();
+  </script>
+</body>
+</html>

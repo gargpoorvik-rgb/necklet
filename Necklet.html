@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Necklet — Handcrafted & Trendy Jewelry Made Just for You</title>
-  <meta name="description" content="Vibrant, handcrafted jewelry by Necklet. Explore unique girls bracelets, boys bracelets, girls necklaces, boys necklaces, earrings, and special designs made just for you." />
+  <meta name="description" content="Vibrant, handcrafted jewelry by Necklet. Explore unique girls bracelets, boys bracelets, girls necklaces, boys necklaces, and earrings made just for you." />
   
   <!-- Google Fonts: Poppins & Playfair Display for headings, Inter & Plus Jakarta Sans for body -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1537,7 +1537,9 @@
     .modal-img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
+      background: #FAF8F5;
+      padding: 12px;
     }
 
     .modal-content-area {
@@ -1819,9 +1821,9 @@
               <div class="hero-image-wrapper">
                 <img 
                   id="heroDisplayImg"
-                  src="https://images.unsplash.com/photo-1611591475879-1c9f56475d4f?auto=format&fit=crop&w=900&q=80" 
-                  alt="Necklet Signature Pastel Bracelet"
-                  onerror="this.onerror=null; this.src=getSvgFallback('Girls Bracelets', 'Pastel Blossom Stack', '#NK-GB101');"
+                  src="images/girls_bracelet_1.webp" 
+                  alt="Pastel Blossom Flower Chain Bracelet"
+                  onerror="this.onerror=null; this.src=getSvgFallback('Girls Bracelets', 'Pastel Blossom Flower Chain Bracelet', '#NK-GB101');"
                 />
               </div>
               <div class="hero-card-details">
@@ -1829,9 +1831,9 @@
                   <div style="font-size: 0.78rem; text-transform: uppercase; font-weight: 700; color: var(--sunset-peach); letter-spacing: 0.5px;">
                     ✨ Featured Design #NK-GB101
                   </div>
-                  <h3 class="hero-card-title">Pastel Blossom Beaded Bracelet</h3>
+                  <h3 class="hero-card-title">Pastel Blossom Flower Bracelet</h3>
                 </div>
-                <div class="hero-card-price">₹399</div>
+                <div class="hero-card-price">₹49</div>
               </div>
             </div>
           </div>
@@ -1886,10 +1888,6 @@
             <button class="cat-tab-btn tab-mint" data-category="Earrings">
               <span>✨ Earrings</span>
               <span class="cat-badge-count" id="count-earrings">4</span>
-            </button>
-            <button class="cat-tab-btn" data-category="Special Designs">
-              <span>🌟 Special Designs</span>
-              <span class="cat-badge-count" id="count-special">4</span>
             </button>
           </div>
         </div>
@@ -2092,7 +2090,6 @@
             <li><a href="#home" class="footer-link">Home</a></li>
             <li><a href="#designs" class="footer-link">Our Designs</a></li>
             <li><a href="#how-to-order" class="footer-link">How to Order</a></li>
-            <li><a href="#designs" class="footer-link" onclick="setCategoryFilter('Special Designs')">Special Designs</a></li>
           </ul>
         </div>
 
@@ -2193,302 +2190,217 @@
       /* Girls Bracelets */
       {
         id: "NK-GB101",
-        code: "#NK-GB101",
-        name: "Pastel Blossom Beaded Bracelet",
+        code: "n/-bpf=g",
+        name: "Pastel Flower Bracelet",
         category: "Girls Bracelets",
-        price: "₹399",
-        numericPrice: 399,
+        price: "₹49",
+        numericPrice: 49,
         badgeClass: "badge-girls",
-        description: "Handcrafted frosted pastel glass beads interspersed with 18k gold-plated daisy spacers and a gentle magnetic clasp.",
-        image: "https://images.unsplash.com/photo-1611591475879-1c9f56475d4f?auto=format&fit=crop&w=800&q=80",
-        details: "Featuring candy peach, mint, and lilac beads. Hypoallergenic, 7-inch standard length with 1-inch extender."
+        description: "Handcrafted frosted pastel acrylic flowers with colorful candy bead centers, delicate gold chain links, and an accompanying bead accent chain.",
+        image: "images/girls_bracelet_1.webp",
+        details: "Featuring frosted pastel flowers in blush pink, mint, yellow, lilac, and peach with gold bead chain accents and lobster clasp."
       },
       {
         id: "NK-GB102",
-        code: "#NK-GB102",
-        name: "Celestial Dainty Pearl Charm",
+        code: "n/-bmf=g",
+        name: "Moon Fairy Bracelet",
         category: "Girls Bracelets",
-        price: "₹499",
-        numericPrice: 499,
+        price: "₹49",
+        numericPrice: 49,
         badgeClass: "badge-girls",
-        description: "Lustrous freshwater seed pearls paired with delicate golden crescent moon & shimmering star micro-charms.",
-        image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80",
-        details: "Real Grade-AA freshwater seed pearls on durable braided silk cord with lobster clasp."
+        description: "Dainty gold double-chain bracelet with pastel gemstone beads and an intricate pavé rhinestone crescent moon featuring a sitting golden fairy.",
+        image: "images/girls_bracelet_2.webp",
+        details: "Shimmering cubic zirconia crescent moon, polished pastel crystal beads, and dainty gold heart links. High polish finish."
       },
       {
         id: "NK-GB103",
-        code: "#NK-GB103",
-        name: "Strawberry Quartz Silk Macramé",
+        code: "n/-bdp=g",
+        name: "Dragon Bracelet Pack 4",
         category: "Girls Bracelets",
-        price: "₹449",
-        numericPrice: 449,
+        price: "₹180",
+        numericPrice: 180,
         badgeClass: "badge-girls",
-        description: "Genuine natural strawberry quartz crystals hand-woven with adjustable blush pink silk cord and rose-gold accent beads.",
-        image: "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&w=800&q=80",
-        details: "Known for promoting love and joy. Waterproof silk cord with effortless slide adjustability."
-      },
-      {
-        id: "NK-GB104",
-        code: "#NK-GB104",
-        name: "Sunset Candy Y2K Smiley Stack",
-        category: "Girls Bracelets",
-        price: "₹349",
-        numericPrice: 349,
-        badgeClass: "badge-girls",
-        description: "Playful retro polymer clay flower beads, bright yellow smiley face charms, and sunny golden yellow accents.",
-        image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=800&q=80",
-        details: "Stretchy comfortable fit, super lightweight and fun for summer everyday styling."
+        description: "Stunning 4-piece gold bracelet set: black & white rhinestone snake wave, curvy crystal tennis strand, sculpted swirl cluster, and hot pink enamel butterfly chain.",
+        image: "images/girls_bracelet_3.webp",
+        details: "Complete set of 4 luxury fashion bracelets. AAA rhinestones, lustrous gold finish, and vibrant enamel butterfly charm with extender chains."
       },
 
       /* Boys Bracelets */
       {
         id: "NK-BB201",
-        code: "#NK-BB201",
-        name: "Midnight Braided Leather Cuff",
+        code: "n/-bbl=b",
+        name: "Black Leather Bracelet",
         category: "Boys Bracelets",
-        price: "₹599",
-        numericPrice: 599,
+        price: "₹49",
+        numericPrice: 49,
         badgeClass: "badge-boys",
-        description: "Double-woven full grain black Italian leather with a brushed matte black titanium magnetic sliding clasp.",
-        image: "https://images.unsplash.com/photo-1620656798579-1984d9e87dfa?auto=format&fit=crop&w=800&q=80",
-        details: "Clean, masculine minimalist design. High durability, sweatproof and comfortable."
+        description: "Sleek double black leather strap accented with a textured vintage mesh barrel bead, metallic spacer rings, and a hanging steel ring with a gunmetal magnetic clasp.",
+        image: "images/boys_bracelet_1.webp",
+        details: "High-grade leather, magnetic sliding lock. Lightweight, comfortable everyday wear."
       },
       {
         id: "NK-BB202",
-        code: "#NK-BB202",
-        name: "Matte Onyx & Golden Tiger Eye",
+        code: "n/-bba=b",
+        name: "Black Anchor Bracelet",
         category: "Boys Bracelets",
-        price: "₹549",
-        numericPrice: 549,
+        price: "₹49",
+        numericPrice: 49,
         badgeClass: "badge-boys",
-        description: "8mm raw volcanic basalt stones paired with matte satin black onyx and shimmering golden-brown tiger eye beads.",
-        image: "https://images.unsplash.com/photo-1598560917505-59a3ad559071?auto=format&fit=crop&w=800&q=80",
-        details: "Double elastic silicone core. Grounding stones that symbolize courage and focus."
+        description: "Multi-strand black braided leather bracelet featuring a detailed antique silver maritime anchor with rope charm and T-bar toggle clasp.",
+        image: "images/boys_bracelet_2.webp",
+        details: "Classic sailor & coastal aesthetic. Sturdy braided leather cords with antique silver alloy hardware."
       },
       {
         id: "NK-BB203",
-        code: "#NK-BB203",
-        name: "Minimalist Urban Rope Chain",
+        code: "n/-bbo=b",
+        name: "Beaded Om Bracelet",
         category: "Boys Bracelets",
-        price: "₹649",
-        numericPrice: 649,
+        price: "₹49",
+        numericPrice: 49,
         badgeClass: "badge-boys",
-        description: "316L hypoallergenic surgical stainless steel diamond-cut rope link bracelet. 100% waterproof and tarnish-proof.",
-        image: "https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?auto=format&fit=crop&w=800&q=80",
-        details: "Precision lobster claw clasp. Wear it swimming, showering, or working out without discoloration."
+        description: "Glossy 8mm black onyx bead prayer bracelet centered with a circular bronze medallion engraved with the sacred Om symbol and a steel barrel accent.",
+        image: "images/boys_bracelet_3.webp",
+        details: "Adjustable black drawstring cord. Calming and grounding spiritual energy stones."
       },
       {
         id: "NK-BB204",
-        code: "#NK-BB204",
-        name: "Tactical Sea & Anchor Shackle",
+        code: "n/-bcod=b",
+        name: "Crimson Onyx Dou",
         category: "Boys Bracelets",
-        price: "₹449",
-        numericPrice: 449,
+        price: "₹60",
+        numericPrice: 60,
         badgeClass: "badge-boys",
-        description: "Weather-resistant 550 navy blue paracord woven around a solid brushed stainless steel marine anchor shackle.",
-        image: "https://images.unsplash.com/photo-1506630448388-4e683c67ddb0?auto=format&fit=crop&w=800&q=80",
-        details: "Adjustable 3-hole pin shackle. Rugged outdoor aesthetic with maritime flair."
+        description: "Bold two-piece stack: woven red & black survival paracord band paired with translucent red jasper and black agate beads with an antique Greek fret tube.",
+        image: "images/boys_bracelet_4.webp",
+        details: "Includes the 2-in-1 layered bracelet design. Durable military-grade cord and natural polished gemstones."
+      },
+      {
+        id: "NK-BB205",
+        code: "n/-bmil=b",
+        name: "Men in Love",
+        category: "Boys Bracelets",
+        price: "₹60",
+        numericPrice: 60,
+        badgeClass: "badge-boys",
+        description: "Rugged black multi-strand leather cuff with natural wooden beads, carved tribal steel tubes, and an engraved gunmetal plate with yellow cross 'I LOVE YOU'.",
+        image: "images/boys_bracelet_5.webp",
+        details: "Multi-layered genuine leather, natural wood beads, and adjustable sliding knot pull closure."
+      },
+      {
+        id: "NK-BB206",
+        code: "n/-btod=b",
+        name: "Turquoise Onyx Dou",
+        category: "Boys Bracelets",
+        price: "₹60",
+        numericPrice: 60,
+        badgeClass: "badge-boys",
+        description: "Electric royal blue and matte black tire-tread textured beads accented with vivid blue ceramic globes and three silver Greek key fretwork spacer rings.",
+        image: "images/boys_bracelet_6.webp",
+        details: "High-elastic stretch band. Eye-catching modern geometric and industrial streetwear aesthetic."
+      },
+      {
+        id: "NK-BB207",
+        code: "n/-bee=b",
+        name: "Evil Eye",
+        category: "Boys Bracelets",
+        price: "₹60",
+        numericPrice: 60,
+        badgeClass: "badge-boys",
+        description: "Multi-cord black braided leather and waxed rope bracelet centered with a glowing deep sapphire blue faceted crystal gem and polished steel spacer beads.",
+        image: "images/boys_bracelet_7.webp",
+        details: "Faceted royal blue crystal focal stone, adjustable braided slide cord, versatile layered wrist look."
       },
 
       /* Girls Necklaces */
       {
-        id: "NK-NK401",
-        code: "#NK-NK401",
-        name: "Golden Hour Layered Chain Duo",
+        id: "NK-GN401",
+        code: "n/-nr=g",
+        name: "Ring Necklace",
         category: "Girls Necklaces",
-        price: "₹749",
-        numericPrice: 749,
+        price: "₹149",
+        numericPrice: 149,
         badgeClass: "badge-girls-necklaces",
-        description: "Double-strand 18k gold-plated snake chain paired seamlessly with an airy paperclip toggle chain.",
-        image: "https://images.unsplash.com/photo-1599643477877-530eb83abc8e?auto=format&fit=crop&w=800&q=80",
-        details: "Pre-layered two-in-one necklace with single tangle-free clasp. 16\" + 18\" cascade."
+        description: "Modern gold double-chain lariat necklace featuring a sleek curved bar arc, golden coin disc, and an open geometric circle hoop pendant.",
+        image: "images/girls_necklace_1.webp",
+        details: "High-polish golden finish. Contemporary drop-lariat design that pairs gorgeously with deep-V and scoop necklines."
       },
       {
-        id: "NK-NK402",
-        code: "#NK-NK402",
-        name: "Ocean Breeze Turquoise Choker",
+        id: "NK-GN402",
+        code: "n/-ng=g",
+        name: "Gold Necklace",
         category: "Girls Necklaces",
-        price: "₹599",
-        numericPrice: 599,
+        price: "₹149",
+        numericPrice: 149,
         badgeClass: "badge-girls-necklaces",
-        description: "Natural Mediterranean sea-sediment turquoise beads accented with molten raw gold nugget spacer disks.",
-        image: "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=800&q=80",
-        details: "Vibrant coastal charm. Waterproof cord with 2-inch extender chain."
+        description: "Exquisite gold paperclip and bead chain necklace highlighting an intricate filigree heart inscribed with 'Love', topped with a crown and evil eye gem with a gold bead drop.",
+        image: "images/girls_necklace_2.webp",
+        details: "Fine artisan filigree openwork, protective evil eye accent, and delicate gold bead dangle."
       },
       {
-        id: "NK-NK403",
-        code: "#NK-NK403",
-        name: "Lavender Mist Opalite Pendant",
+        id: "NK-GN403",
+        code: "n/-ngl=g",
+        name: "Gold Lock Necklace",
         category: "Girls Necklaces",
-        price: "₹699",
-        numericPrice: 699,
+        price: "₹149",
+        numericPrice: 149,
         badgeClass: "badge-girls-necklaces",
-        description: "Glowing ethereal translucent opalite crystal wrapped in delicate silver filigree wire on an 18-inch chain.",
-        image: "https://images.unsplash.com/photo-1600003014755-ba31aa59c4b6?auto=format&fit=crop&w=800&q=80",
-        details: "Changes color in sunlight from misty blue to glowing golden amber."
-      },
-      {
-        id: "NK-NK404",
-        code: "#NK-NK404",
-        name: "Sunset Coral & Pearl Collar",
-        category: "Girls Necklaces",
-        price: "₹799",
-        numericPrice: 799,
-        badgeClass: "badge-girls-necklaces",
-        description: "Hand-strung genuine baroque freshwater pearls smoothly transitioning into warm peach coral roundels.",
-        image: "https://images.unsplash.com/photo-1506630448388-4e683c67ddb0?auto=format&fit=crop&w=800&q=80",
-        details: "Luxury artisan look. Finished with an 18k gold vermeil ball clasp."
+        description: "Trendy layered curb chain statement necklace showcasing a polished gold padlock pendant and cylinder lock hardware.",
+        image: "images/girls_necklace_3.webp",
+        details: "Y2K street-style aesthetic. High-shine tarnish-resistant gold plating with secure closure."
       },
 
       /* Boys Necklaces */
       {
         id: "NK-BN601",
-        code: "#NK-BN601",
-        name: "Midnight Obsidian Dog Tag Pendant",
+        code: "n/-nbep=b",
+        name: "Bronze Eagle Pendant",
         category: "Boys Necklaces",
-        price: "₹649",
-        numericPrice: 649,
+        price: "₹49",
+        numericPrice: 49,
         badgeClass: "badge-boys-necklaces",
-        description: "Sleek 316L stainless steel military dog tag inlaid with polished natural volcanic obsidian on a 24-inch curb chain.",
-        image: "https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?auto=format&fit=crop&w=800&q=80",
-        details: "Hypoallergenic, sweat-resistant, and tarnish-free. Designed for comfortable everyday wear."
+        description: "Striking antique bronze circular medallion featuring an embossed wingspread mockingbird pendant on an adjustable silver ball chain.",
+        image: "images/boys_necklace_1.webp",
+        details: "Vintage rustic bronze finish. 24-inch ball bead chain with connector clasp. Unisex statement piece."
       },
       {
         id: "NK-BN602",
-        code: "#NK-BN602",
-        name: "Urban Cuban Curb Link Chain",
+        code: "n/-nas=b",
+        name: "Antique Skull Necklace",
         category: "Boys Necklaces",
-        price: "₹699",
-        numericPrice: 699,
+        price: "₹49",
+        numericPrice: 49,
         badgeClass: "badge-boys-necklaces",
-        description: "Bold 6mm diamond-cut bevelled Cuban curb link chain forged in premium high-shine silver surgical stainless steel.",
-        image: "https://images.unsplash.com/photo-1599643477877-530eb83abc8e?auto=format&fit=crop&w=800&q=80",
-        details: "Classic streetwear essential. 22-inch length with secure heavy-duty lobster clasp."
-      },
-      {
-        id: "NK-BN603",
-        code: "#NK-BN603",
-        name: "Nordic Compass Medallion Cord",
-        category: "Boys Necklaces",
-        price: "₹599",
-        numericPrice: 599,
-        badgeClass: "badge-boys-necklaces",
-        description: "Vintage brushed gunmetal silver coin pendant engraved with the Vegvisir wayfinder compass on durable braided cord.",
-        image: "https://images.unsplash.com/photo-1506630448388-4e683c67ddb0?auto=format&fit=crop&w=800&q=80",
-        details: "Symbol of protection and direction. Adjustable slide knot fits from 18 to 26 inches."
-      },
-      {
-        id: "NK-BN604",
-        code: "#NK-BN604",
-        name: "Matte Hematite & Tiger Eye Bead Collar",
-        category: "Boys Necklaces",
-        price: "₹649",
-        numericPrice: 649,
-        badgeClass: "badge-boys-necklaces",
-        description: "6mm masculine bead necklace strung with magnetic gunmetal hematite, matte black onyx, and warm golden tiger eye.",
-        image: "https://images.unsplash.com/photo-1598560917505-59a3ad559071?auto=format&fit=crop&w=800&q=80",
-        details: "Double strung on stainless steel wire with screw barrel lock. 20-inch collar drape."
+        description: "Solid sculpted antique brass skull and crossbones pirate pendant accented with carved metal barrel beads on a durable black braided cord.",
+        image: "images/boys_necklace_2.webp",
+        details: "High-detail brass alloy skull casting. Sturdy braided leather-feel cord with secure lobster clasp."
       },
 
       /* Earrings */
       {
-        id: "NK-ER301",
-        code: "#NK-ER301",
-        name: "Sunset Aura Iridescent Hoops",
+        id: "N/EHP=U",
+        code: "N/EHP=U",
+        name: "Heart Earring Pack",
         category: "Earrings",
-        price: "₹449",
-        numericPrice: 449,
+        price: "₹200",
+        numericPrice: 200,
         badgeClass: "badge-earrings",
-        description: "Lightweight chunky translucent peach and soft lavender resin hoops flecked with luminous 24k gold leaf flakes.",
-        image: "https://images.unsplash.com/photo-1630019852942-f89202989a59?auto=format&fit=crop&w=800&q=80",
-        details: "Featherlight design for zero ear fatigue. Surgical steel hypoallergenic posts."
+        description: "A colorful heart-themed earring pack.",
+        image: "images/earrings_1.webp",
+        details: "Heart-style earrings in assorted designs."
       },
       {
-        id: "NK-ER302",
-        code: "#NK-ER302",
-        name: "Blushing Daisy Ceramic Studs",
+        id: "N/EP=U",
+        code: "N/EP=U",
+        name: "Square Earring Pack",
         category: "Earrings",
-        price: "₹399",
-        numericPrice: 399,
+        price: "₹200",
+        numericPrice: 200,
         badgeClass: "badge-earrings",
-        description: "Hand-sculpted pastel mint ceramic flower petals with warm golden peach center. Subtle and wonderfully aesthetic.",
-        image: "https://images.unsplash.com/photo-1535632787350-4e68ef0ac584?auto=format&fit=crop&w=800&q=80",
-        details: "Glazed stoneware ceramic with titanium posts. Perfect for sensitive ears."
-      },
-      {
-        id: "NK-ER303",
-        code: "#NK-ER303",
-        name: "Gilded Waterfall Statement Drops",
-        category: "Earrings",
-        price: "₹699",
-        numericPrice: 699,
-        badgeClass: "badge-earrings",
-        description: "Hammered golden brass tiers cascading downward with faceted teardrops of natural lavender amethyst crystals.",
-        image: "https://images.unsplash.com/photo-1635767798638-3e25273a8236?auto=format&fit=crop&w=800&q=80",
-        details: "Eye-catching movement and gorgeous light reflection for parties, dates, or evening wear."
-      },
-      {
-        id: "NK-ER304",
-        code: "#NK-ER304",
-        name: "Lilac Butterfly Crystal Huggies",
-        category: "Earrings",
-        price: "₹499",
-        numericPrice: 499,
-        badgeClass: "badge-earrings",
-        description: "14k gold-vermeil mini huggie hoops featuring sparkling pavé lilac zirconia butterfly drops that catch the light.",
-        image: "https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?auto=format&fit=crop&w=800&q=80",
-        details: "Secure click-latch closure. Wear alone or stacked with multiple ear piercings."
+        description: "A stylish square-themed earring pack.",
+        image: "images/earrings_2.webp",
+        details: "Square-style earrings in assorted designs."
       },
 
-      /* Special Designs */
-      {
-        id: "NK-SP501",
-        code: "#NK-SP501",
-        name: "Custom Nameplate Charm Choker",
-        category: "Special Designs",
-        price: "₹849",
-        numericPrice: 849,
-        badgeClass: "badge-special",
-        description: "Personalized hand-stamped letter coins framed by micro freshwater pearls and pastel zirconia charms.",
-        image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=800&q=80",
-        details: "Specify your desired name or letters (up to 8 characters) in your order email!"
-      },
-      {
-        id: "NK-SP502",
-        code: "#NK-SP502",
-        name: "Bohemian Sunburst Body Chain",
-        category: "Special Designs",
-        price: "₹999",
-        numericPrice: 999,
-        badgeClass: "badge-special",
-        description: "Radiant golden chest and waist multi-chain adorned with dainty celestial sun coins and delicate bells.",
-        image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=800&q=80",
-        details: "Festival and beach essential. Adjustable clasps fit waist sizes 24\" to 36\"."
-      },
-      {
-        id: "NK-SP503",
-        code: "#NK-SP503",
-        name: "Starry Night Sculpted Brass Cuff",
-        category: "Special Designs",
-        price: "₹899",
-        numericPrice: 899,
-        badgeClass: "badge-special",
-        description: "Adjustable upper-arm cuff hand-forged in raw golden brass and centered with celestial deep-blue lapis lazuli.",
-        image: "https://images.unsplash.com/photo-1611591475879-1c9f56475d4f?auto=format&fit=crop&w=800&q=80",
-        details: "Limited artisan batch. Bendable structure effortlessly conforms to arm contours."
-      },
-      {
-        id: "NK-SP504",
-        code: "#NK-SP504",
-        name: "Soulmate Magnetic Bond Duo",
-        category: "Special Designs",
-        price: "₹749",
-        numericPrice: 749,
-        badgeClass: "badge-special",
-        description: "Matching his & hers / best friend bracelet set with interlocking magnetic half-hearts and custom initials.",
-        image: "https://images.unsplash.com/photo-1620656798579-1984d9e87dfa?auto=format&fit=crop&w=800&q=80",
-        details: "Comes as a pair (one pastel peach cord, one midnight black rope) with magnetic attraction."
-      }
     ];
 
     /* ==========================================================================
@@ -2506,8 +2418,6 @@
         grad1 = "#2C3E50"; grad2 = "#4CA1AF"; icon = "⚡";
       } else if (category === "Earrings") {
         grad1 = "#A18CD1"; grad2 = "#FBC2EB"; icon = "✨";
-      } else if (category === "Special Designs") {
-        grad1 = "#FF6B6B"; grad2 = "#84FAB0"; icon = "🌟";
       }
 
       const svgString = `
@@ -2573,13 +2483,33 @@
     const mobileNavDrawer = document.getElementById("mobileNavDrawer");
     const menuIcon = document.getElementById("menuIcon");
 
+    function updateBadgeCounts() {
+      const getCount = (cat) => PRODUCTS.filter(p => p.category === cat || p.secondaryCategory === cat).length;
+      const countAll = document.getElementById("count-all");
+      const countGirls = document.getElementById("count-girls");
+      const countBoys = document.getElementById("count-boys");
+      const countGirlsNeck = document.getElementById("count-girls-necklaces");
+      const countBoysNeck = document.getElementById("count-boys-necklaces");
+      const countEarrings = document.getElementById("count-earrings");
+
+      if (countAll) countAll.textContent = PRODUCTS.length;
+      if (countGirls) countGirls.textContent = getCount("Girls Bracelets");
+      if (countBoys) countBoys.textContent = getCount("Boys Bracelets");
+      if (countGirlsNeck) countGirlsNeck.textContent = getCount("Girls Necklaces");
+      if (countBoysNeck) countBoysNeck.textContent = getCount("Boys Necklaces");
+      if (countEarrings) countEarrings.textContent = getCount("Earrings");
+    }
+
     /* ==========================================================================
        4. RENDER PRODUCTS
        ========================================================================== */
     function renderProducts() {
+      updateBadgeCounts();
       // Filter logic
       const filtered = PRODUCTS.filter(product => {
-        const matchesCategory = (currentCategory === "all") || (product.category === currentCategory);
+        const matchesCategory = (currentCategory === "all") || 
+          (product.category === currentCategory) || 
+          (product.secondaryCategory === currentCategory);
         const matchesSearch = searchQuery === "" || 
           product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
           product.code.toLowerCase().includes(searchQuery.toLowerCase()) ||
